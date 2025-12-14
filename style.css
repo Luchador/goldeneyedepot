@@ -7,9 +7,9 @@ html, body {
 :root {
 	--frame-width: 1200px;
 	--sidebar-width: 12px;
-	--font-heading: "Inter", Arial, Helvetica, sans-serif;
+	--font-heading: "VT323", monospace; 
 	--font-ui: "Orbitron", Arial, Helvetica, sans-serif;
-	--font-body: "Merriweather", Georgia, "Times New Roman", serif;
+	--font-body: "Courier New", Courier, monospace;
 }
 
 .site-frame {
@@ -58,6 +58,7 @@ body {
 
 main {
 	flex: 1;
+	padding-bottom: 20px;
 	padding-left: calc(var(--sidebar-width) + 24px);
     padding-right: calc(var(--sidebar-width) + 24px);
 }
@@ -66,6 +67,7 @@ main h1,
 main h2,
 main h3 {
 	font-size: 2.5rem;
+	margin-top: 10px;
 	margin-bottom: 0.5em;
 	font-family: var(--font-heading);
 	letter-spacing: 0.02em;
@@ -78,17 +80,23 @@ p {
 }
 
 a {
-	color: #9fd3ff;
+	color: #e9e900;
 	text-decoration: none;
 }
 
 a:hover {
+	color: #ffff00;
 	text-decoration: underline;
 }
 
 .gold-text {
 	color: #d4af37;
 	text-shadow: 0 0 6px rgba(212, 175, 55, 1);
+	padding-right: 1px;
+}
+
+.yellow-text {
+	color: #ffff00;
 }
 
 /* =========================
@@ -224,28 +232,194 @@ a:hover {
 }
 
 /* =========================
-   Section Lists (Weapons, etc.)
+   Weapon Layout
    ========================= */
 
-.weapon-list {
-	margin-top: 30px;
-	border-top: 1px solid #800;
+.weapon-page {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.weapon-item {
-	padding: 15px 0;
-	border-bottom: 1px solid #600;
+.weapon-header {
+  margin-bottom: 18px;
 }
 
-.weapon-item h2 {
-	margin: 0 0 6px 0;
-	font-size: 1.3rem;
+.weapon-header h1 {
+  margin: 0 0 6px 0;
 }
 
-.weapon-item p {
-	margin: 0;
+.weapon-subtitle {
+  margin: 0;
+  color: #ffcc00;
+  font-family: var(--font-heading);
+  font-size: 2.0rem;
+}
+
+.panel {
+	border: 2px solid #660000;
+	background-color: #220000;
+}
+
+.weapon-top {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* left fixed, right flexible */
+  gap: 16px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+/* Make the stats grid slightly narrower/cleaner */
+.weapon-stats .stats-grid {
+  grid-template-columns: 170px 1fr; /* label/value inside the stats panel */
+}
+
+/* Hero image block */
+.weapon-hero {
+	padding: 6px;
+}
+
+.weapon-hero a {
+  display: block;
+}
+
+.weapon-hero a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.weapon-hero img {
+	width: 100%;
+	aspect-ratio: 4 / 3;   /* matches your 1600x1200 images */
+	object-fit: cover;
+	display: block;
+	border: 1px solid #660000;
+}
+
+.weapon-hero-caption {
+	margin-top: 8px;
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+	.weapon-top {
+		grid-template-columns: 1fr;
+	}
+}
+
+.weapon-stats .stats-grid {
+	display: grid;
+	grid-template-columns: 220px 1fr; /* label / value */
+	gap: 0;
+}
+
+.weapon-stats .stat-row {
+	display: contents; /* lets each row share the 2-column grid */
+}
+
+.weapon-stats .stat-label,
+.weapon-stats .stat-value {
+	padding: 10px 12px;
+	border-top: 1px solid #660000;
 	font-size: 0.95rem;
 }
+
+.weapon-stats .stat-label {
+	font-family: var(--font-ui);
+	letter-spacing: 0.02em;
+	color: #fff;
+	background-color: #220000;
+	border-right: 1px solid #660000;
+}
+
+.weapon-stats .stat-value {
+	color: #e0e0e0;
+	background-color: #000;
+}
+
+/* First row border cleanup */
+.weapon-stats .stats-grid > :nth-child(1),
+.weapon-stats .stats-grid > :nth-child(2) {
+	border-top: none;
+}
+
+.weapon-description {
+	margin-top: 18px;
+	padding: 14px 14px;
+}
+
+.weapon-description p {
+	margin: 0 0 12px 0;
+	font-family: var(--font-body);
+	font-size: 1.0rem;
+	color: #e0e0e0;
+}
+
+.weapon-description p:last-child {
+	margin-bottom: 0;
+}
+
+.weapon-gallery {
+	margin-top: 18px;
+	padding: 6px;
+}
+
+.weapon-gallery .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.weapon-gallery figure {
+	margin: 0;
+}
+
+.weapon-gallery img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	max-width: 400px;
+    border: 1px solid #660000;
+	object-fit: cover;
+	display: block;
+}
+
+.weapon-gallery a {
+	display: inline-block;
+}
+
+.weapon-gallery a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.weapon-gallery figcaption {
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+	padding-right: 20px;
+}
+
+@media (max-width: 900px) {
+	.weapon-stats .stats-grid {
+		grid-template-columns: 160px 1fr;
+	}
+}
+
+@media (max-width: 600px) {
+	.weapon-stats .stats-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.weapon-stats .stat-label {
+		border-right: none;
+		border-bottom: 1px solid #660000;
+	}
+
+	.weapon-gallery .gallery-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
 
 /* =========================
    Footer
@@ -314,8 +488,8 @@ footer p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.0) 60%
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.0) 100%
   );
   pointer-events: none;
 }

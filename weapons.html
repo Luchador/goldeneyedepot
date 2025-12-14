@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>The GoldenEye Depot</title>
+	<title>Weapons - The GoldenEye Depot</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,25 +34,127 @@
 	</nav>
 	<main>
 		<h1>Weapons</h1>
-
 		<p>
-		This section documents the weapons featured in <em>GoldenEye 007</em>, including their behavior, statistics, and development details.
+			<span class="gold-text"><em>GoldenEye 007</em></span> features an astonishing 32 weapons (if you count Unarmed and the Detonator as weapons). These weapons are generally inspired by real world weapons, but also include weapons from the Bond universe such as the Golden Gun as well as fictional designs like the Tazer Boy.
 		</p>
+		<p>
+			This page lists the weapons in the order they appear in the Watch Menu.
+		</p>
+		<p>
+			The <span class="yellow-text">penetration</span> value refers to how many objects it takes to stop a bullet. A value of 1 means the bullet stops at the first object. A value of 2 means the bullet damages the first object it hits then passes through and has the ability to damage the object behind it. A value of 3 means it hits and damages 2 objects then stops at the third object, etc...
+		</p>
+		<h2 class="weapon-subtitle">Unarmed<h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">2.0</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">Unlimited</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">All levels</div>
+				</div>
+			</div>
 
-		<div class="weapon-list">
-			<div class="weapon-item">
-			<h2>PP7 (Silenced)</h2>
-			<p>
-			Bond’s signature sidearm. Accurate, quiet, and effective in stealth situations.
-			</p>
-		</div>
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_unarmed.jpg">
+				<img src="images/weapons/weapon_fp_unarmed.jpg" alt="Unarmed in first person view">
+				</a>
+				<div class="weapon-hero-caption">Bond performing his famous slap attack to knock out a guard in one hit.</div>
+			</div>
+		</section>
 
-		<div class="weapon-item">
-			<h2>Klobb</h2>
-			<p>
-			A rapid-fire submachine gun with heavy recoil and limited accuracy.
-			</p>
-		</div>
+      <!-- Description Panel -->
+      <section class="weapon-description panel" aria-label="Weapon description">
+        <p>
+		This is the only weapon the player is "armed" with no matter what. Most enemies can be knocked out in one hit if they are unalerted and struck from behind. Unarmed is often popularly refered to as
+		<span class="yellow-text">Slappers</span> because the multiplayer weapon set with no weapons is called "Slappers Only!".
+        </p>
+        <p>
+		There are two variants of the attack - one animation slaps from the left and the other slaps from the right. The animation is selected purely at random.
+        </p>
+		<p>
+		Unarmed is unique among GoldenEye weapons in that it has an alternate form. If the player has a <span class="yellow-text">Sniper Rifle</span> the hand will be replaced with the butt of the sniper rifle.
+        </p>
+      </section>
+
+      <!-- Gallery Panel -->
+      <section class="weapon-gallery panel" aria-label="Weapon images">
+        <div class="gallery-grid">
+          <figure>
+		    <a href="images/weapons/xenia_slap.jpg">
+            <img src="images/weapons/xenia_slap.jpg" alt="Bond knocks out Xenia with a slap chop in the movie.">
+			</a>
+            <figcaption>Bond knocks out Xenia with a slap chop in the movie.</figcaption>
+          </figure>
+
+          <figure>
+			<a href="images/weapons/weapon_fp_unarmed_sniper.jpg">
+            <img src="images/weapons/weapon_fp_unarmed_sniper.jpg" alt="Alternate Unarmed model">
+			</a>
+            <figcaption>Alternate form: sniper rifle butt</figcaption>
+          </figure>
+        </div>
+      </section>
+	  
+		<h2 class="weapon-subtitle">Hunting Knife<h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">3.0</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">Unlimited</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">Yes</div>
+				<div class="stat-label">Location</div><div class="stat-value">Cheats only</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_hp_hunting_knife.jpg">
+				<img src="images/weapons/weapon_hp_hunting_knife.jpg" alt="Hunting Knife in first person view">
+				</a>
+				<div class="weapon-hero-caption">Hunting Knife in first person view.</div>
+			</div>
+		</section>
+
+      <!-- Description Panel -->
+      <section class="weapon-description panel" aria-label="Weapon description">
+        <p>
+		A more powerful melee weapon than your bare hand, the Hunting Knife is unfortunately only available via the 
+		<span class="yellow-text">2x Hunting Knife</span> or the <span class="yellow-text">All Guns</span> cheats. Similar to the Slappers, the Hunting Knife will randomly slice from the left or the right.
+        </p>
+		<p>
+		Despite the gut-wrenching sound they make, Hunting Knives do not create blood on characters. Perhaps Rare or Nintendo thought that would be too gory.
+		</p>
+      </section>
+
+      <!-- Gallery Panel -->
+      <section class="weapon-gallery panel" aria-label="Weapon images">
+        <div class="gallery-grid">
+          <figure>
+		    <a href="images/weapons/weapon_watch_hunting_knife.jpg">
+            <img src="images/weapons/weapon_watch_hunting_knife.jpg" alt="Hunting Knife in the Pause Menu.">
+			</a>
+            <figcaption>Curiously, while most weapons have longer names in the main pause menu screen, the Hunting Knife is called simply "Knife".</figcaption>
+          </figure>
+
+          <figure>
+			<a href="images/weapons/hunting_knife_attack.jpg">
+            <img src="images/weapons/hunting_knife_attack.jpg" alt="Attacking with Hunting Knives">
+			</a>
+            <figcaption>A hapless Janus Marine suffers the wrath of dual Hunting Knives.</figcaption>
+          </figure>
+        </div>
+      </section>
 	</main>
 
 	<footer>
