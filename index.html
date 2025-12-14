@@ -1,32 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>GoldenEye Depot</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1>
-	
-	<style>
-		body {
-			font-family: Arial, Helvetica, sans-serif;
-			background: #000000;
-			color: #ffffff;
-			max-width: 800px;
-			margin: 40px auto;
-			line-height: 1.6;
-		}
-		h1 {
-			color: #ffd700;
-		}
-		a {
-			color: #9fd3ff;
-		}
+  <meta charset="UTF-8">
+  <title>The GoldenEye Depot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* --- Base layout --- */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- Main content --- */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #e0e0e0;
+    }
+
+    /* --- Footer --- */
+    footer {
+      border-top: 1px solid #333;
+      padding: 15px 20px;
+      font-size: 0.85rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    /* --- Links (future-proofing) --- */
+    a {
+      color: #9fd3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-
 <body>
-  <p style="font-size: 0.8em;">Test text test text testing cats</p>
-  <p style="font-size: 0.8em;">
-    The GoldenEye Depot is an unofficial fan website. It is not affiliated with Nintendo, Rare, MGM or EON.
-  </p>
+
+  <main>
+    <h1>The GoldenEye Depot</h1>
+
+    <p>
+      Welcome to The GoldenEye Depot — a reference site dedicated to
+      <em>GoldenEye 007</em> for the Nintendo 64.
+    </p>
+
+    <p>
+      This site aims to document levels, mechanics, development details,
+      and other technical and historical aspects of the game.
+    </p>
+
+    <p>
+      Content is currently under construction.
+    </p>
+  </main>
+
+  <footer>
+    The GoldenEye Depot is an unofficial fan website. It is not affiliated
+    with Nintendo, Rare, MGM or EON.
+  </footer>
+
 </body>
 </html>
