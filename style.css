@@ -360,6 +360,48 @@ a:hover {
 	border-top: none;
 }
 
+/* =========================
+   Weapon Manual Panel
+   ========================= */
+
+.weapon-manual {
+	margin-top: 16px;
+	padding: 14px 16px;
+	background-color: #000;
+}
+
+.weapon-manual h3 {
+	margin: 0 0 10px 0;
+	font-family: var(--font-heading);
+	font-size: 1.4rem;
+	color: #ffcc00;
+}
+
+.manual-entry {
+	display: grid;
+	grid-template-columns: 160px 1fr;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.manual-label {
+	font-family: var(--font-ui);
+	font-size: 0.9rem;
+	color: #ccc;
+	letter-spacing: 0.02em;
+}
+
+.manual-value {
+	font-family: var(--font-body);
+	font-size: 0.95rem;
+	color: #e0e0e0;
+	line-height: 1.5;
+}
+
+.manual-entry:last-child {
+	margin-bottom: 0;
+}
+
 .weapon-description {
 	margin-top: 18px;
 	padding: 14px 14px;
