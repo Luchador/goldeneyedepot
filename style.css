@@ -73,8 +73,24 @@ main h3 {
 	letter-spacing: 0.02em;
 }
 
+main a {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+}
+
+main a:hover {
+	color: #ffff00;
+	text-decoration-thickness: 3px;
+}
+
+main a:visited {
+  color: #b38cff;
+}
+
 p {
-	line-height: 1.7;
+	line-height: 1.5;
 	font-size: 1.0rem;
 	color: #e0e0e0;
 }
@@ -353,7 +369,8 @@ a:hover {
 	margin: 0 0 12px 0;
 	font-family: var(--font-body);
 	font-size: 1.0rem;
-	color: #e0e0e0;
+	color: #fff;
+	word-spacing: -0.1em;
 }
 
 .weapon-description p:last-child {
@@ -492,4 +509,52 @@ footer p {
     rgba(0,0,0,0.0) 100%
   );
   pointer-events: none;
+}
+
+.dev-quote {
+  margin: 12px 0;
+  padding: 14px 18px;
+
+  border-left: 4px solid #660000;
+  background-color: rgba(88, 0, 0, 0.4);
+
+  line-height: 1.4;
+
+  color: #ddd;
+}
+
+.dev-quote p {
+	font-family: monospace;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.dev-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: #aaa;
+  font-style: normal;
+}
+
+.dev-quote .quote-source {
+  margin-left: 6px;
+  font-size: 0.8rem;
+}
+
+.dev-quote .quote-source a {
+  color: #9fd3ff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.dev-quote .quote-source a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.dev-quote .quote-source a::before {
+  content: "↗ ";
+  color: #aaaaaa;
 }
