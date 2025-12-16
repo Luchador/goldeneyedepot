@@ -34,16 +34,67 @@
 	<main>
 		<h1>Weapons</h1>
 		<p>
-			<span class="gold-text"><em>GoldenEye 007</em></span> features an astonishing 32 weapons (if you count Unarmed and the Detonator as weapons). These weapons are generally inspired by real world weapons, but also include weapons from the Bond universe such as the Golden Gun and original designs that are only loosely based on real weapons.
+			<span class="gold-text"><em>GoldenEye 007</em></span> features an astonishing 31 weapons if you count Unarmed. Or 32 if you count the Remote Mine Detonator. These weapons are generally inspired by real world weapons, but also include weapons from the Bond universe such as the Golden Gun and original designs that are only loosely based on real weapons.
 		</p>
 		<p>
-			This page lists the weapons in the order they appear in the Pause Menu. Special thanks to the <a href="https://www.imfdb.org/wiki/GoldenEye_007">Internet Movie Firearms Database</a> and its contributors which I used as a source for some information when making this page. 
-			Also thanks to the creators of the GoldenEye Setup Editor which I used to find the exact data for weapon statistics.
+			This page lists the weapons in the order they appear in the Pause Menu. Special thanks to the <a href="https://www.imfdb.org/wiki/GoldenEye_007">Internet Movie Firearms Database</a> and its contributors which I used as a source for some information. 
+			Also thanks to <span class="red-text">Subdrag</span> and other contributors of the <a href="https://github.com/carnivoroussociety/GoldEditor">GoldenEye Setup Editor</a>. I used it to find the exact data for weapon statistics.
 		</p>
 		<p>
-			The <span class="yellow-text">penetration</span> value refers to how many objects it takes to stop a bullet. A value of 1 means the bullet stops at the first object. A value of 2 means the bullet damages the first object it hits then passes through and has the ability to damage another object behind it. A value of 3 means it hits and damages 2 objects then stops at the third object, etc...
+			The <span class="red-text">Penetration</span> value refers to how many objects it takes to stop a bullet. Objects include things like characters, doors, and crates, but <em>not</em> most walls. 
+			A value of 1 means the bullet stops at the first object. A value of 2 means the bullet damages the first object it hits then passes through and has the ability to damage another object behind it. 
+			A value of 3 means it hits and damages 2 objects then stops at the third object, etc...
 		</p>
-		<h2 class="weapon-subtitle">Unarmed</h2>
+		<p>
+			I believe <span class="red-text">Rate of Fire</span> is the number of frames between shots when holding down <span class="n64-btn n64-btn-z">Z</span>. Thus the lower the value, the faster the weapon fires. <span class="red-text">TODO: </span>verify this.
+		</p>
+		<p>
+			<span class="red-text">Inaccuracy</span> is the spread of fired shots. Zero is perfectly accurate. The higher the value, the higher the spread.
+		</p>
+		<p>
+			<span class="red-text">Loudness (Min/Max)</span> has nothing to do with volume of the sound effect. This value tells the game how much noise firing the weapon makes to guards. I believe that the min value is the noise made when fired once, while the max value
+			is the noise made after the weapon is fired a certain number of times in a row. <span class="red-text">TODO: </span>look into the game's code and find the formula for this.
+		</p>
+
+		<section class="contents panel" aria-label="Weapons contents">
+			<h2 class="contents-title">Contents</h2>
+
+			<ul class="contents-grid">
+			<li><a href="#unarmed">Unarmed</a></li>
+			<li><a href="#knife">Hunting Knife</a></li>
+			<li><a href="#tknife">Throwing Knife</a></li>
+			<li><a href="#pp7">PP7 Special Issue</a></li>
+			<li><a href="#pp7s">PP7 (Silenced)</a></li>
+			<li><a href="#dd44">DD44 Dostovei</a></li>
+			<li><a href="#klobb">Klobb</a></li>
+			<li><a href="#kf7">KF7 Soviet</a></li>
+			<li><a href="#zmg">ZMG (9mm)</a></li>
+			<li><a href="#d5k">D5K Deutsche</a></li>
+			<li><a href="#d5ks">D5K (Silenced)</a></li>
+			<li><a href="#phantom">Phantom</a></li>
+			<li><a href="#ar33">US AR33 Assault Rifle</a></li>
+			<li><a href="#rcp90">RC-P90</a></li>
+			<li><a href="#shotgun">Shotgun</a></li>
+			<li><a href="#autoshotgun">Automatic Shotgun</a></li>
+			<li><a href="#sniper">Sniper Rifle</a></li>
+			<li><a href="#cmag">Cougar Magnum</a></li>
+			<li><a href="#gg">Golden Gun</a></li>			
+			<li><a href="#silverpp7">Silver PP7</a></li>
+			<li><a href="#goldpp7">Gold PP7</a></li>
+			<li><a href="#laser">Military Laser</a></li>
+			<li><a href="#watchlaser">Watch Laser</a></li>
+			<li><a href="#gl">Grenade Launcher</a></li>
+			<li><a href="#rl">Rocket Launcher</a></li>
+			<li><a href="#grenade">Grenade</a></li>
+			<li><a href="#timedmine">Timed Mine</a></li>
+			<li><a href="#proxymine">Proximity Mine</a></li>
+			<li><a href="#remotemine">Remote Mine</a></li>
+			<li><a href="#taser">Taser</a></li>
+			<li><a href="#tank">Tank</a></li>
+			</ul>
+		</section>
+
+		<h2 id="unarmed" class="weapon-subtitle">Unarmed</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -55,7 +106,7 @@
 				<div class="stat-label">Max Reserve</div><div class="stat-value">N/A</div>
 				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
 				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/1.0</div>
-				<div class="stat-label">Inaccuracy</div><div class="stat-value">0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
 				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
 				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
 				<div class="stat-label">Location</div><div class="stat-value">All levels</div>
@@ -107,7 +158,7 @@
         </div>
       </section>
 	  
-		<h2 class="weapon-subtitle">Hunting Knife</h2>
+		<h2 id="knife" class="weapon-subtitle">Hunting Knife</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -119,7 +170,7 @@
 				<div class="stat-label">Max Reserve</div><div class="stat-value">N/A</div>
 				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
 				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/1.0</div>
-				<div class="stat-label">Inaccuracy</div><div class="stat-value">0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
 				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
 				<div class="stat-label">Dual Wield</div><div class="stat-value">Yes (Cheats only)</div>
 				<div class="stat-label">Location</div><div class="stat-value">Cheats only</div>
@@ -161,6 +212,9 @@
 		<p>
 		Despite the gut-wrenching sound they make, Hunting Knives do not create blood on characters. Perhaps Rare or Nintendo thought that would be too gory.
 		</p>
+		<p>
+		It's interesting that the manual calls this weapon a <span class="yellow-text">Fighting Knife</span>. As far as I'm aware this is the only official reference to it by that name.
+		</p>
       </section>
 
       <!-- Gallery Panel -->
@@ -182,7 +236,7 @@
         </div>
       </section>
 	  
-	  <h2 class="weapon-subtitle">Throwing Knife</h2>
+	  <h2 id="tknife" class="weapon-subtitle">Throwing Knife</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -194,7 +248,7 @@
 				<div class="stat-label">Max Reserve</div><div class="stat-value">11</div>
 				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
 				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/1.0</div>
-				<div class="stat-label">Inaccuracy</div><div class="stat-value">0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
 				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
 				<div class="stat-label">Dual Wield</div><div class="stat-value">Yes</div>
 				<div class="stat-label">Location</div><div class="stat-value">Bunker 2</div>
@@ -232,6 +286,9 @@
         <p>
 		The Throwing Knife is tricky to use, but with practice it can become an effective close to short-medium range weapon. One advantage of Throwing Knives is that they can be picked up and reused as long as they don't land in an inaccessible location.
         </p>
+		<p>
+		You can press and hold <span class="n64-btn n64-btn-z">Z</span> to draw back the knife. This will allow you to throw the knife quickly when you release.
+        </p>
       </section>
 
       <!-- Gallery Panel -->
@@ -241,7 +298,7 @@
 		    <a href="images/weapons/weapon_watch_throwing_knife.jpg">
             <img src="images/weapons/weapon_watch_throwing_knife.jpg" alt="Throwing Knife in the Pause Menu.">
 			</a>
-            <figcaption>The Throwing Knife's model is nearly identical to the Hunting Knife's model. The only difference is the spacing of the ridges on the handle.</figcaption>
+            <figcaption>The Throwing Knife's model is nearly identical to the Hunting Knife's. The only difference is the spacing of the ridges on the handle.</figcaption>
           </figure>
 
           <figure>
@@ -253,7 +310,7 @@
         </div>
       </section>
 	  
-	<h2 class="weapon-subtitle">PP7 Special Issue</h2>
+	<h2 id="pp7" class="weapon-subtitle">PP7 Special Issue</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -304,7 +361,7 @@
 			Based on Bond's iconic weapon of choice, the <span class="yellow-text">Walther PPK</span>, the PP7 is commonly issued as the starting weapon in the later levels of GoldenEye. Its excellent accuracy makes up for the small magazine size. Good players can reliably take down enemies with PP7 headshots.
 			</p>
 			<p>
-			Only two NPCs use the PP7 in all of GoldenEye. One is the Russian Commandant in Bunker 1. The other is Boris in Control, and Boris fumbles his.
+			Only two NPCs use the PP7 in all of GoldenEye. One is the Russian Commandant in Bunker 1. The other is Boris in Control, but Boris fumbles his.
 			</p>
 		</section>
 
@@ -341,7 +398,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">PP7 (Silenced)</h2>
+		<h2 id="pp7s" class="weapon-subtitle">PP7 (Silenced)</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -412,7 +469,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">DD44 Dostovei</h2>
+		<h2 id="dd44" class="weapon-subtitle">DD44 Dostovei</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -463,7 +520,7 @@
 			The DD44 is the favored sidearm of most of <span class="gold-text"><em>GoldenEye 007's</em></span> enemies. Despite its bulky size, booming sound, and manual description it actually does no more damage than the PP7. It's still incredibly fun to dual wield on Archives.
 			</p>
 			<p>
-			The DD44 is generally considered to be based on the <span class="yellow-text">Tokarev TT-33</span>, as "tt33" is the game's internal name for the weapon. There is an argument to be made that the game's actual model is based on a Hungarian-made TT-33 variant called the <a href="https://en.wikipedia.org/wiki/Tokagypt_58">Tokagypt 58</a>.
+			The DD44 is generally considered to be based on the <span class="yellow-text">Tokarev TT-33</span>, because "tt33" is the game's internal name for the weapon. There is an argument to be made that the game's actual model is based on a Hungarian-made TT-33 variant called the <a href="https://en.wikipedia.org/wiki/Tokagypt_58">Tokagypt 58</a>.
 			</p>
 		</section>
 
@@ -500,7 +557,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Klobb</h2>
+		<h2 id="klobb" class="weapon-subtitle">Klobb</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -567,6 +624,9 @@
 			<p>
 			The Klobb's design is based on the <span class="yellow-text">Škorpion vz. 61</span>, a Czechoslovak machine pistol. The stock is somewhat unique for folding over top of the gun, and in game the stock is always in the folded position. Reviews I've seen of the real world Škorpion actually rate it very favorably.
 			</p>
+			<p>
+			The game's internal name for the Klobb is "skorpion".
+			</p>
 		</section>
 
 		<!-- Gallery Panel -->
@@ -588,7 +648,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">KF7 Soviet</h2>
+		<h2 id="kf7" class="weapon-subtitle">KF7 Soviet</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -639,7 +699,7 @@
 			The KF7 Soviet is the bread and butter of <span class="gold-text"><em>GoldenEye 007</em></span> firearms. This ubiquitous rifle is found in the majority of levels. It's not terribly accurate when hip fired, but can make decent shots when zoomed in and fired singly.
 			</p>
 			<p>
-			The KF7 can be burst fired by tapping the Z button once when unzoomed. It becomes automatic when Z is held down.
+			The KF7 can be burst fired by tapping the <span class="n64-btn n64-btn-z">Z</span> button once when unzoomed. It becomes automatic when <span class="n64-btn n64-btn-z">Z</span> is held down.
 			</p>
 			<p>
 			The game model is based on the Chinese <span class="yellow-text">Type 56-1</span> which has a fully hooded front sight. GoldenEye's variant has no stock and a muzzle brake somewhere between that of a Type 56 and an AK-74. The weapon is called "ak47" internally. Unlike most of GoldenEye's gun models, the KF7 actually has a trigger.
@@ -682,7 +742,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">ZMG (9mm)</h2>
+		<h2 id="zmg" class="weapon-subtitle">ZMG (9mm)</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -753,7 +813,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">D5K Deutsche</h2>
+		<h2 id="d5k" class="weapon-subtitle">D5K Deutsche</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -801,7 +861,7 @@
 		<!-- Description Panel -->
 		<section class="weapon-description panel" aria-label="Weapon description">
 			<p>
-			The D5K is an effective submachine gun with a steady rate of fire and better accuracy than the ZMG. It's based on the <span class="yellow-text">Heckler & Kock MP5K</span>, with the gun's name being a nod to its German orgin. It's mostly seen in the second half of the game, although it's possible to pick up 006's D5K after he dies or tosses it in Facility.
+			The D5K is an effective submachine gun with a steady rate of fire and better accuracy than the ZMG. It's based on the <span class="yellow-text">Heckler & Kock MP5K</span>, with the gun's name being a nod to its German orgin. It's mostly seen in the second half of the game, although it's possible to pick up 006's D5K after he "dies" or tosses it in Facility.
 			</p>
 		</section>
 
@@ -824,7 +884,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">D5K (Silenced)</h2>
+		<h2 id="d5ks" class="weapon-subtitle">D5K (Silenced)</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -878,7 +938,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Phantom</h2>
+		<h2 id="phantom" class="weapon-subtitle">Phantom</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -955,7 +1015,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">US AR33 Assault Rifle</h2>
+		<h2 id="ar33" class="weapon-subtitle">US AR33 Assault Rifle</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1006,7 +1066,7 @@
 			My personal favorite. This is the first weapon in the list with penetrating power. It has a very helpful zoom and a highly distinctive star-shaped muzzle flash. Game artist Adrian Smith used the movie <em>Heat</em> as reference for the muzzle flash.
 			</p>
 			<p>
-			The AR33 operates similarly to the KF7. A quick Z press while unzoomed fires a three round burst. Holding Z makes the rifle fully automatic.
+			The AR33 operates similarly to the KF7. A quick <span class="n64-btn n64-btn-z">Z</span> press while unzoomed fires a three round burst. Holding <span class="n64-btn n64-btn-z">Z</span> makes the rifle fully automatic.
 			</p>
 			<p>
 			The AR33 is based on the real world <span class="yellow-text">M16A2</span> rifle.
@@ -1046,7 +1106,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">RC-P90</h2>
+		<h2 id="rcp90" class="weapon-subtitle">RC-P90</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1123,7 +1183,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Shotgun</h2>
+		<h2 id="shotgun" class="weapon-subtitle">Shotgun</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1180,7 +1240,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Automatic Shotgun</h2>
+		<h2 id="autoshotgun" class="weapon-subtitle">Automatic Shotgun</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1240,7 +1300,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Sniper Rifle</h2>
+		<h2 id="sniper" class="weapon-subtitle">Sniper Rifle</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1280,7 +1340,7 @@
 			<div class="manual-entry">
 				<div class="manual-label">Manual Description</div>
 				<div class="manual-value">
-				An extreme-range, single shot rifle. Highly effective, but patience and timing are required. When aiming, press <span class="yellow-text">C-Up</span> or <span class="yellow-text">C-Down</span> to zoom in and out.
+				An extreme-range, single shot rifle. Highly effective, but patience and timing are required. When aiming, press <span class="n64-btn n64-btn-c n64-btn-c-up">C</span> or <span class="n64-btn n64-btn-c n64-btn-c-down">C</span> to zoom in and out.
 				</div>
 			</div>
 		</section>
@@ -1291,7 +1351,7 @@
 			The Sniper Rifle has the strongest zoom in the game and it's the only weapon with a variable zoom.
 			</p>
 			<p>
-			Due to <span class="yellow-text">C-Up</span> and <span class="yellow-text">C-Down</span> being used for adjusting zoom, you cannot do crouch while holding the Sniper Rifle. If you want to crouch with the Sniper Rifle you must switch to another weapon, crouch, and then switch back to the Sniper Rifle.
+			Due to <span class="n64-btn n64-btn-c n64-btn-c-up">C</span> and <span class="n64-btn n64-btn-c n64-btn-c-down">C</span> being used for adjusting zoom, you cannot do crouch while holding the Sniper Rifle. If you want to crouch with the Sniper Rifle you must switch to another weapon, crouch, and then switch back to the Sniper Rifle.
 			</p>
 			<p>
 			The Sniper Rifle is an original design that isn't really based off any real world weapon. The scope does look somewhat similar to the one used on Bond's <span class="yellow-text">Walther WA 2000</span> in <em>The Living Daylights</em>.
@@ -1331,7 +1391,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Cougar Magnum</h2>
+		<h2 id="cmag" class="weapon-subtitle">Cougar Magnum</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1408,7 +1468,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Golden Gun</h2>
+		<h2 id="gg" class="weapon-subtitle">Golden Gun</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1474,7 +1534,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Silver PP7</h2>
+		<h2 id="silverpp7" class="weapon-subtitle">Silver PP7</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1531,7 +1591,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Gold PP7</h2>
+		<h2 id="goldpp7" class="weapon-subtitle">Gold PP7</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1588,7 +1648,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Military Laser</h2>
+		<h2 id="laser" class="weapon-subtitle">Military Laser</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1645,7 +1705,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Watch Laser</h2>
+		<h2 id="watchlaser" class="weapon-subtitle">Watch Laser</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1719,7 +1779,7 @@
 			</div>
 		</section>
 		
-		<h2 class="weapon-subtitle">Grenade Launcher</h2>
+		<h2 id="gl" class="weapon-subtitle">Grenade Launcher</h2>
 		<section class="weapon-top">
 				<!-- Stats Panel -->
 				<div class="weapon-stats panel" aria-label="Weapon statistics">
@@ -1789,6 +1849,537 @@
 					<img src="images/weapons/gl_fire.jpg" alt="Bombs away!">
 					</a>
 					<figcaption>Bombs away!<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="rl" class="weapon-subtitle">Rocket Launcher</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Rockets</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">3</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">2.0/25.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">Yes (Cheats only)</div>
+				<div class="stat-label">Location</div><div class="stat-value">Streets, Depot</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_rl.jpg">
+				<img src="images/weapons/weapon_fp_rl.jpg" alt="Rocket Launcher in first person view">
+				</a>
+				<div class="weapon-hero-caption">Rocket Launcher in first person view.</div>
+			</div>
+		</section>
+		
+		<!-- Manual Panel -->
+		<section class="weapon-manual panel" aria-label="Manual description">
+			<h3>From the Game Manual</h3>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Name</div>
+				<div class="manual-value">Rocket Launcher</div>
+			</div>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Description</div>
+				<div class="manual-value">
+				Tank-stopping heavy weapon. Devastating against soft targets.
+				</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			The Rocket Launcher packs a heavy punch with potentially greater range than the Grenade Launcher. Its main drawback is that it can only carry a maximum of 3 rockets in reserve.
+			</p>
+			<p>
+			The weapon's design borrows elements of the <span class="yellow-text">Type 69 RPG</span> and the <span class="yellow-text">RPG-7</span> but isn't an exact match to either.
+			</p>
+			<p>
+			The yellow text on the side of the launcher reads "<span class="yellow-text">картофель включен</span>", a Russian phrase that translates to "potates included". It's pretty funny that we're calling the powerful Rocket Launcher a spud gun!
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_rl.jpg">
+					<img src="images/weapons/weapon_watch_rl.jpg" alt="Rocket Launcher in the Pause Menu.">
+					</a>
+					<figcaption>Rocket Launcher in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/rl_fire.jpg">
+					<img src="images/weapons/rl_fire.jpg" alt="Firing a rocket.">
+					</a>
+					<figcaption>Firing a rocket.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="grenade" class="weapon-subtitle">Grenade</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Grenade</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">13</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/2.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">All levels except Dam and Train</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_grenade.jpg">
+				<img src="images/weapons/weapon_grenade.jpg" alt="Tossing a grenade.">
+				</a>
+				<div class="weapon-hero-caption">Tossing a grenade.</div>
+			</div>
+		</section>
+		
+		<!-- Manual Panel -->
+		<section class="weapon-manual panel" aria-label="Manual description">
+			<h3>From the Game Manual</h3>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Name</div>
+				<div class="manual-value">Grenades</div>
+			</div>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Description</div>
+				<div class="manual-value">
+				Pull out the pin, count and throw. Simple. The fuse is 5 seconds, so a count of 2 or 3 is safe.
+				</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			The trusty grenade is a pretty fun weapon. The fuse timer starts as soon as you press and hold <span class="n64-btn n64-btn-z">Z</span>, so as the manual advises, do be sure to release it before it explodes. <span class="gold-text"><em>GoldenEye 007</em></span> must have been one of the first FPS games to let players cook grenades.
+			Let me know if you can think of any FPS games released before <span class="gold-text"><em>GoldenEye 007</em></span> that had this mechanic.
+			</p>
+			<p>
+			The game does not show Bond holding the grenade in his hand. Released grenades simply appear from the right side of the screen.
+			</p>
+			<p>
+			A Grenade in a characters's hand can be shot and exploded while they hold it. Grenades can also be shot and exploded while in mid-air.
+			</p>
+			<p>
+			There are at least <em>some</em> guards who will pull grenades on every level except for Dam and Train. Train makes sense because guards would be just as likely to hurt themselves as Bond on that tight map. Dam may be because the developers didn't want to "throw" too much at the player on their first level.
+			</p>
+			<p>
+			The Grenade's design is based on the American <span class="yellow-text">Mk 2 hand grenade</span>.
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_grenade.jpg">
+					<img src="images/weapons/weapon_watch_grenade.jpg" alt="Grenade in the Pause Menu.">
+					</a>
+					<figcaption>Grenade in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/grenade_live.jpg">
+					<img src="images/weapons/grenade_live.jpg" alt="A live grenade just moments from exploding.">
+					</a>
+					<figcaption>A live grenade just moments from exploding.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="timedmine" class="weapon-subtitle">Timed Mine</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Remote Mine</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">11</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/2.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">Runway, Caverns</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_tm.jpg">
+				<img src="images/weapons/weapon_fp_tm.jpg" alt="Throwing a Timed Mine.">
+				</a>
+				<div class="weapon-hero-caption">Throwing a Timed Mine onto the Inlet Pump Controls in Caverns.</div>
+			</div>
+		</section>
+		
+		<!-- Manual Panel -->
+		<section class="weapon-manual panel" aria-label="Manual description">
+			<h3>From the Game Manual</h3>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Name</div>
+				<div class="manual-value">Timed Mines</div>
+			</div>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Description</div>
+				<div class="manual-value">
+				A limpet mine with a 5 second fuse.
+				</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			The Timed Mine is similar to the Grenade, but tends to stick to surfaces rather than bounce. Guards never use the Timed Mine or any other mines.
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_tm.jpg">
+					<img src="images/weapons/weapon_watch_tm.jpg" alt="Timed Mine in the Pause Menu.">
+					</a>
+					<figcaption>Timed Mine in the Pause Menu. Note that the model is significantly different from the icon.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/timed_mine.jpg">
+					<img src="images/weapons/timed_mine.jpg" alt="Close-up view of the Timed Mine.">
+					</a>
+					<figcaption>Close-up view of the Timed Mine.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="proxymine" class="weapon-subtitle">Proximity Mine</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Proximity Mine</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">11</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/2.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">Depot</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_proxy.jpg">
+				<img src="images/weapons/weapon_fp_proxy.jpg" alt="Throwing a Proximity Mine.">
+				</a>
+				<div class="weapon-hero-caption">Throwing a Proximity Mine.</div>
+			</div>
+		</section>
+		
+		<!-- Manual Panel -->
+		<section class="weapon-manual panel" aria-label="Manual description">
+			<h3>From the Game Manual</h3>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Name</div>
+				<div class="manual-value">Proximity Mines</div>
+			</div>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Description</div>
+				<div class="manual-value">
+				Motion-sensing limpet mines. Fire, but DON'T forget, as they can't tell the difference between friend and foe.
+				</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			Of course this mine is most useful for eliminating characters, but the manual really isn't kidding when it calls them motion-sensing. Other mines, grenades, rockets, Grenade Launcher rounds, and even Throwing Knives will all set off Proximity Mines.
+			</p>
+			<p>
+			Proximity mines will also detonate when shot — useful for clearing them if a multiplayer opponent has put them in your path.
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_proxy.jpg">
+					<img src="images/weapons/weapon_watch_proxy.jpg" alt="Proximity Mine in the Pause Menu.">
+					</a>
+					<figcaption>Proximity Mine in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/proxy_mine.jpg">
+					<img src="images/weapons/proxy_mine.jpg" alt="Close-up view of the Proximity Mine.">
+					</a>
+					<figcaption>Close-up view of the Proximity Mine.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="remotemine" class="weapon-subtitle">Remote Mine</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Remote Mine</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">11</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/2.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">Facility, Surface 2, Jungle, Control</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_rm.jpg">
+				<img src="images/weapons/weapon_fp_rm.jpg" alt="Throwing a Remote Mine.">
+				</a>
+				<div class="weapon-hero-caption">Throwing a Remote Mine onto a bottling tank in Facility.</div>
+			</div>
+		</section>
+		
+		<!-- Manual Panel -->
+		<section class="weapon-manual panel" aria-label="Manual description">
+			<h3>From the Game Manual</h3>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Name</div>
+				<div class="manual-value">Remote Mines</div>
+			</div>
+
+			<div class="manual-entry">
+				<div class="manual-label">Manual Description</div>
+				<div class="manual-value">
+				A versatile device. Clings to most surfaces and can be set off by remote control.
+				</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			This explosive mine variant is exploded via a Detonator. After throwing one or more mines press <span class="n64-btn n64-btn-a">A</span> to switch to the Detonator. The Detonator has unlimited range and is activated by pressing <span class="n64-btn n64-btn-z">Z</span>. Mines can even be stacked on top of each other,
+			although the game does have limits on how many explosions can be made at once.
+			</p>
+			<p>
+			There is a shortcut for detonating Remote Mines. After tossing a Remote Mine press <span class="n64-btn n64-btn-a">A</span> + <span class="n64-btn n64-btn-b">B</span> at the same time.
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_rm.jpg">
+					<img src="images/weapons/weapon_watch_rm.jpg" alt="Remote Mine in the Pause Menu.">
+					</a>
+					<figcaption>Remote Mine in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/rm_movie.jpg">
+					<img src="images/weapons/rm_movie.jpg" alt="The Remote Mine in the movie.">
+					</a>
+					<figcaption>The Remote Mine in the movie.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="taser" class="weapon-subtitle">Taser</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">1.0</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">None</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">Unlimited</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">2.0/10.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">Cheat only</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_taser.jpg">
+				<img src="images/weapons/weapon_fp_taser.jpg" alt="First person view of the Taser.">
+				</a>
+				<div class="weapon-hero-caption">First person view of the Taser.</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			This is a weird one. The Taser is a <span class="yellow-text">Game Boy-looking</span> weapon that can only be obtained with the All Guns cheat. The menu spells "Taser" with a 's' while the label on the model spells it with a 'z'.
+			</p>
+			<p>
+			It has an embedded screen which plays an animated image of the Bond silhouette. Every <span class="n64-btn n64-btn-z">Z</span> press fires a single shot that does 1.0 damage and the Taser must be raised again before another shot can be fired. Unlike a real Taser, this one has unlimited range and energy.
+			</p>
+			<p>
+			There's an unused animation (see below) of a guard getting shocked. This would have paired great with the Taser. It feels like the developers had bigger plans for this weapon, but probably never got around to them because of time constraints.
+			</p>
+			<p>
+			The game manual makes no mention of the Taser.
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_taser.jpg">
+					<img src="images/weapons/weapon_watch_taser.jpg" alt="Taser in the Pause Menu.">
+					</a>
+					<figcaption>Taser in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/taser_fire.jpg">
+					<img src="images/weapons/taser_fire.jpg" alt="Taser with Z held down.">
+					</a>
+					<figcaption>Keeping <span class="n64-btn n64-btn-z">Z</span> held down after firing the Taser.<figcaption>
+				</figure>
+				
+				<figure>
+					<video class="weapon-video" controls preload="metadata">
+					<source src="videos/taser_anim_unused.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					<figcaption>Unused shock animation. Exported from the <a href="https://github.com/carnivoroussociety/GoldEditor">GoldenEye Setup Editor</a>.<figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<h2 id="tank" class="weapon-subtitle">Tank</h2>
+		<section class="weapon-top">
+				<!-- Stats Panel -->
+				<div class="weapon-stats panel" aria-label="Weapon statistics">
+				<div class="stats-grid">
+				<div class="stat-label">Damage</div><div class="stat-value">Variable</div>
+				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+				<div class="stat-label">Ammo Type</div><div class="stat-value">Tank</div>
+				<div class="stat-label">Magazine</div><div class="stat-value">1</div>
+				<div class="stat-label">Max Reserve</div><div class="stat-value">50</div>
+				<div class="stat-label">Rate of Fire</div><div class="stat-value">14</div>
+				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">2.0/25.0</div>
+				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+				<div class="stat-label">Location</div><div class="stat-value">Runway, Streets</div>
+				</div>
+			</div>
+
+			<!-- Hero image panel -->
+			<div class="weapon-hero panel" aria-label="Weapon image">
+				<a href="images/weapons/weapon_fp_tank.jpg">
+				<img src="images/weapons/weapon_fp_tank.jpg" alt="First person view while driving the Tank.">
+				</a>
+				<div class="weapon-hero-caption">First person view while driving the Tank.</div>
+			</div>
+		</section>
+		
+		<!-- Description Panel -->
+		<section class="weapon-description panel" aria-label="Weapon description">
+			<p>
+			The tank is not just a fearsome weapon, but <span class="gold-text"><em>GoldenEye 007's</em></span> only drivable vehicle. It can be found to the side of the Facility building in Runway and near the beginning of Streets. In both cases the Tank will carry 30 shells with no way to pick up more.
+			</p>
+			<p>
+			No ignition key is necessaary to use the Tank. Simply climb up near the hatch and press <span class="n64-btn n64-btn-b">B</span> to enter. Press <span class="n64-btn n64-btn-b">B</span> again to exit. You can still switch to your regular guns while driving the Tank.
+			</p>
+			<p>
+			The tank's cannon is not its only means of eliminating enemies. You can also crush enemies by driving over them. This is not a weapon for the squeamish!
+			</p>
+			<p>
+			The tank's model is based on the Soviet <span class="yellow-text">T-55</span> with some ERA blocks added to make it look more modern.
+			</p>
+			<p>
+			The game manual makes no mention of the Tank.
+			</p>
+		</section>
+
+		<!-- Gallery Panel -->
+		<section class="weapon-gallery panel" aria-label="Weapon images">
+			<div class="gallery-grid">
+				<figure>
+					<a href="images/weapons/weapon_watch_tank.jpg">
+					<img src="images/weapons/weapon_watch_tank.jpg" alt="Tank in the Pause Menu.">
+					</a>
+					<figcaption>The Tank has no model in the Pause Menu.</figcaption>
+				</figure>
+
+				<figure>
+					<a href="images/weapons/tank_front.jpg">
+					<img src="images/weapons/tank_front.jpg" alt="Tank front view.">
+					</a>
+					<figcaption>Tank front view.<figcaption>
+				</figure>
+				
+				<figure>
+					<a href="images/weapons/tank_side.jpg">
+					<img src="images/weapons/tank_side.jpg" alt="Tank side view.">
+					</a>
+					<figcaption>Tank side view.<figcaption>
+				</figure>
+				
+				<figure>
+					<a href="images/weapons/tank_rear.jpg">
+					<img src="images/weapons/tank_rear.jpg" alt="Tank rear view.">
+					</a>
+					<figcaption>Tank rear view.<figcaption>
 				</figure>
 			</div>
 		</section>
