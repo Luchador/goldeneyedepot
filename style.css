@@ -73,6 +73,10 @@ main h3 {
 	letter-spacing: 0.02em;
 }
 
+main h1 {
+	text-align: center;
+}
+
 main a {
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
@@ -87,6 +91,18 @@ main a:hover {
 
 main a:visited {
   color: #b38cff;
+}
+
+.main-subtitle {
+	margin: 60px 0 0 0;
+	color: #ffcc00;
+	font-family: var(--font-heading);
+	font-size: 2.0rem;
+}
+
+.panel {
+	border: 2px solid #660000;
+	background-color: #220000;
 }
 
 p {
@@ -256,60 +272,185 @@ a:hover {
    ========================= */
    
 .contents {
-  margin: 18px 0 26px 0;
-  padding: 12px;
-  background-color: #000;
+	margin: 18px 0 26px 0;
+	padding: 12px;
+	background-color: #000;
 }
 
 .contents-title {
-  margin: 0 0 10px 0;
-  font-family: var(--font-ui);
-  font-size: 1.2rem;
-  letter-spacing: 0.02em;
-  color: #ffcc00;
+	margin: 0 0 10px 0;
+	font-family: var(--font-ui);
+	font-size: 1.2rem;
+	letter-spacing: 0.02em;
+	color: #ffcc00;
 }
 
 .contents-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px 14px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 6px 14px;
 }
 
 .contents-grid li {
-  margin: 0;
+	margin: 0;
 }
 
 .contents-grid a {
-  display: inline-block;
-  padding: 2px 6px;
-  border-radius: 3px;
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 3px;
 
-  color: #e9e900;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+	color: #e9e900;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
 }
 
 .contents-grid a:hover {
-  color: #ffff00;
-  text-decoration-thickness: 3px;
+	color: #ffff00;
+	text-decoration-thickness: 3px;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .contents-grid {
+	.contents-grid {
+	grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.contents-grid {
+	grid-template-columns: 1fr;
+	}
+}
+
+/* =========================
+   Image Gallery
+   ========================= */
+   
+.image-gallery {
+	margin-top: 18px;
+	padding: 5px;
+}
+
+.image-gallery h3 {
+	font-family: var(--font-heading);
+	font-size: 1.4rem;
+	color: #ffcc00;
+	padding: 0px 12px 0px 12px;
+}
+
+.image-gallery p {
+	padding: 0px 12px 0px 12px;
+}
+
+.image-gallery .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.image-gallery figure {
+	margin: 0;
+}
+
+.image-gallery img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	max-width: 550px;
+    border: 1px solid #660000;
+	object-fit: cover;
+	display: block;
+}
+
+.image-gallery a {
+	display: inline-block;
+}
+
+.image-gallery a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.image-gallery figcaption {
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+	padding-right: 20px;
+}
+
+/* =========================
+   Outfit Gallery
+   ========================= */
+
+.outfit-gallery {
+	margin-top: 18px;
+	padding: 12px;
+}
+
+.outfit-gallery h3 {
+	margin: 0 0 12px 0;
+	font-family: var(--font-heading);
+	font-size: 1.4rem;
+	color: #ffcc00;
+}
+
+.outfit-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 12px;
+}
+
+.outfit-grid figure {
+	margin: 0;
+	text-align: center;
+}
+
+.outfit-grid img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border: 1px solid #660000;
+	background-color: #000;
+}
+
+.outfit-grid figcaption {
+	margin-top: 6px;
+	margin-bottom: 12px;
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+}
+
+
+@media (max-width: 1200px) {
+  .outfit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .outfit-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .contents-grid {
+@media (max-width: 450px) {
+  .outfit-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.char-hero-caption {
+	margin-top: 8px;
+	margin-bottom: 4px;
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+	text-align: center;
 }
 
 /* =========================
@@ -317,48 +458,33 @@ a:hover {
    ========================= */
 
 .weapon-page {
-  padding-top: 30px;
-  padding-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .weapon-header {
-  margin-bottom: 18px;
+	margin-bottom: 18px;
 }
 
 .weapon-header h1 {
-  margin: 0 0 6px 0;
-}
-
-.weapon-subtitle {
-  margin: 60px 0 0 0;
-  color: #ffcc00;
-  font-family: var(--font-heading);
-  font-size: 2.0rem;
-}
-
-.panel {
-	border: 2px solid #660000;
-	background-color: #220000;
+	margin: 0 0 6px 0;
 }
 
 .weapon-top {
-  display: grid;
-  grid-template-columns: 420px 1fr; /* left fixed, right flexible */
-  gap: 16px;
-  margin-top: 18px;
-  align-items: start;
-}
-
-.weapon-stats .stats-grid {
-  grid-template-columns: 170px 1fr;
+	display: grid;
+	grid-template-columns: 420px 1fr; /* left fixed, right flexible */
+	gap: 16px;
+	margin-top: 18px;
+	align-items: start;
 }
 
 .weapon-hero {
 	padding: 6px;
+	padding-right: 8px;
 }
 
 .weapon-hero a {
-  display: block;
+	display: block;
 }
 
 .weapon-hero a:hover img {
@@ -367,7 +493,6 @@ a:hover {
 
 .weapon-hero img {
 	width: 100%;
-	aspect-ratio: 4 / 3;
 	object-fit: cover;
 	display: block;
 	border: 1px solid #660000;
@@ -384,42 +509,6 @@ a:hover {
 	.weapon-top {
 		grid-template-columns: 1fr;
 	}
-}
-
-.weapon-stats .stats-grid {
-	display: grid;
-	grid-template-columns: 220px 1fr;
-	gap: 0;
-}
-
-.weapon-stats .stat-row {
-	display: contents;
-}
-
-.weapon-stats .stat-label,
-.weapon-stats .stat-value {
-	padding: 10px 12px;
-	border-top: 1px solid #660000;
-	font-size: 0.95rem;
-}
-
-.weapon-stats .stat-label {
-	font-family: var(--font-ui);
-	letter-spacing: 0.02em;
-	color: #fff;
-	background-color: #220000;
-	border-right: 1px solid #660000;
-}
-
-.weapon-stats .stat-value {
-	color: #e0e0e0;
-	background-color: #000;
-}
-
-/* First row border cleanup */
-.weapon-stats .stats-grid > :nth-child(1),
-.weapon-stats .stats-grid > :nth-child(2) {
-	border-top: none;
 }
 
 /* =========================
@@ -481,45 +570,6 @@ a:hover {
 	margin-bottom: 0;
 }
 
-.weapon-gallery {
-	margin-top: 18px;
-	padding: 5px;
-}
-
-.weapon-gallery .gallery-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
-}
-
-.weapon-gallery figure {
-	margin: 0;
-}
-
-.weapon-gallery img {
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	max-width: 550px;
-    border: 1px solid #660000;
-	object-fit: cover;
-	display: block;
-}
-
-.weapon-gallery a {
-	display: inline-block;
-}
-
-.weapon-gallery a:hover img {
-	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-}
-
-.weapon-gallery figcaption {
-	font-size: 0.8rem;
-	color: #aaa;
-	font-family: var(--font-heading);
-	padding-right: 20px;
-}
-
 @media (max-width: 900px) {
 	.weapon-stats .stats-grid {
 		grid-template-columns: 160px 1fr;
@@ -536,19 +586,70 @@ a:hover {
 		border-bottom: 1px solid #660000;
 	}
 
-	.weapon-gallery .gallery-grid {
+	.image-gallery .gallery-grid {
 		grid-template-columns: 1fr;
 	}
 }
 
 .weapon-video {
-  width: 100%;
-  max-width: 550px;
-  display: block;
+	width: 100%;
+	max-width: 550px;
+	display: block;
 
-  border: 1px solid #660000;
-  background-color: #000;
-  margin-bottom: 4px;
+	border: 1px solid #660000;
+	background-color: #000;
+	margin-bottom: 4px;
+}
+
+/* =========================
+   Stats Panel
+   ========================= */
+
+.panel-stats-icon {
+	grid-column: 1 / -1; /* span both columns */
+	text-align: center;
+	padding: 12px;
+	background-color: #000;
+	border-top: 1px solid #660000;
+	border-bottom: 1px solid #660000;
+}
+
+.panel-stats-icon img {
+	max-width: 128px;
+	height: auto;
+	box-shadow:
+	0 0 12px rgba(255, 255, 255, 0.6),
+	0 0 24px rgba(255, 255, 255, 0.35);
+}
+
+.panel-stats .stats-grid {
+	display: grid;
+	grid-template-columns: 220px 1fr;
+	gap: 0;
+}
+
+.panel-stats .stat-row {
+	display: contents;
+}
+
+.panel-stats .stat-label,
+.panel-stats .stat-value {
+	padding: 10px 12px;
+	border-top: 1px solid #660000;
+	font-size: 0.95rem;
+}
+
+.panel-stats .stat-label {
+	font-family: var(--font-ui);
+	letter-spacing: 0.02em;
+	color: #fff;
+	background-color: #220000;
+	border-right: 1px solid #660000;
+}
+
+.panel-stats .stat-value {
+	color: #e0e0e0;
+	background-color: #000;
 }
 
 /* =========================
@@ -570,28 +671,28 @@ footer {
 }
 
 footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
 		
-  /* horizontal scanlines */
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.0) 0px,
-    rgba(0, 0, 0, 0.0) 2px,
-    rgba(255, 0, 0, 0.25) 3px
-  );
+	/* horizontal scanlines */
+	background: repeating-linear-gradient(
+	to bottom,
+	rgba(0, 0, 0, 0.0) 0px,
+	rgba(0, 0, 0, 0.0) 2px,
+	rgba(255, 0, 0, 0.25) 3px
+	);
 
-  opacity: 1.0; /* overall strength */
+	opacity: 1.0; /* overall strength */
 }
 
 footer .footer-inner {
-  border: 2px solid #660000;
-  padding: 8px 12px;
-  position: relative;
-  z-index: 2;
+	border: 2px solid #660000;
+	padding: 8px 12px;
+	position: relative;
+	z-index: 2;
 }
 
 footer p {
