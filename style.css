@@ -56,50 +56,6 @@ body {
 	flex-direction: column;
 }
 
-main {
-	flex: 1;
-	padding-bottom: 20px;
-	padding-left: calc(var(--sidebar-width) + 24px);
-    padding-right: calc(var(--sidebar-width) + 24px);
-}
-
-main h1,
-main h2,
-main h3 {
-	font-size: 2.5rem;
-	margin-top: 10px;
-	margin-bottom: 0.5em;
-	font-family: var(--font-heading);
-	letter-spacing: 0.02em;
-}
-
-main h1 {
-	text-align: center;
-}
-
-main a {
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 3px;
-	transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
-}
-
-main a:hover {
-	color: #ffff00;
-	text-decoration-thickness: 3px;
-}
-
-main a:visited {
-  color: #b38cff;
-}
-
-.main-subtitle {
-	margin: 60px 0 0 0;
-	color: #ffcc00;
-	font-family: var(--font-heading);
-	font-size: 2.0rem;
-}
-
 .panel {
 	border: 2px solid #660000;
 	background-color: #220000;
@@ -268,31 +224,121 @@ a:hover {
 }
 
 /* =========================
+   Main
+   ========================= */
+   
+main {
+	flex: 1;
+	padding-bottom: 20px;
+	padding-left: calc(var(--sidebar-width) + 24px);
+    padding-right: calc(var(--sidebar-width) + 24px);
+}
+
+main h1,
+main h2,
+main h3 {
+	font-size: 2.5rem;
+	margin-top: 10px;
+	margin-bottom: 0.5em;
+	font-family: var(--font-heading);
+	letter-spacing: 0.02em;
+}
+
+main h1 {
+	margin: 50px 0 50px 0;
+	text-align: center;
+}
+
+main a {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+}
+
+main a:hover {
+	color: #ffff00;
+	text-decoration-thickness: 3px;
+}
+
+main a:visited {
+	color: #b38cff;
+}
+
+.main-subtitle {
+	margin: 60px 0 0 0;
+	color: #ffcc00;
+	font-family: var(--font-heading);
+	font-size: 2.0rem;
+	
+	text-shadow:
+	2px 2px 0 #5a4300,
+	-1px -1px 0 rgba(255,226,138,0.8);
+}
+
+/* =========================
    Contents Panel
    ========================= */
    
 .contents {
-	margin: 18px 0 26px 0;
+	margin-top: 60px;
+	position: relative;
+	overflow: hidden;
 	padding: 12px;
-	background-color: #000;
+	background-color: #220000;
+	
+	border: 6px double #660000;
+	box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.10),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.65);
+}
+
+.contents::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: repeating-linear-gradient(
+	to bottom,
+	rgba(0, 0, 0, 0.0) 0px,
+	rgba(0, 0, 0, 0.0) 2px,
+	rgba(255, 0, 0, 0.18) 3px
+	);
+	opacity: 0.9;
+}
+
+.contents > * {
+	position: relative;
+	z-index: 1; /* put text on top of scanlines */
 }
 
 .contents-title {
 	margin: 0 0 10px 0;
 	font-family: var(--font-ui);
 	font-size: 1.2rem;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.1em;
 	color: #ffcc00;
+	
+	padding-bottom: 6px;
+    border-bottom: 2px solid rgba(102, 0, 0, 0.9);
+	
+	text-shadow:
+	2px 2px 0 #5a4300,
+	-1px -1px 0 rgba(255,226,138,0.8);
 }
 
 .contents-grid {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 16px 0 0;
+	
+	text-align: center;
+	font-family: var(--font-ui);
+	letter-spacing: 0.1em;
 
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 6px 14px;
+	gap: 10px 30px;
 }
 
 .contents-grid li {
@@ -300,19 +346,24 @@ a:hover {
 }
 
 .contents-grid a {
-	display: inline-block;
-	padding: 2px 6px;
+	display: block;
+	width: 100%;
+	padding: 3px 7px;
 	border-radius: 3px;
 
 	color: #e9e900;
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 2px;
+
+	border: 1px solid rgba(102, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 0.25);
 }
 
 .contents-grid a:hover {
 	color: #ffff00;
 	text-decoration-thickness: 3px;
+	box-shadow: 0 0 10px rgba(255, 0, 0, 0.45);
 }
 
 /* Responsive */
@@ -381,6 +432,12 @@ a:hover {
 	font-family: var(--font-heading);
 	padding-right: 20px;
 }
+
+.image-gallery figcaption.centered {
+	text-align: center;
+	padding-right: 0;
+}
+
 
 /* =========================
    Outfit Gallery
@@ -512,20 +569,24 @@ a:hover {
 }
 
 /* =========================
-   Weapon Manual Panel
+   Game Manual Panel
    ========================= */
 
-.weapon-manual {
+.game-manual {
 	margin-top: 16px;
 	padding: 14px 16px;
 	background-color: #000;
 }
 
-.weapon-manual h3 {
+.game-manual h3 {
 	margin: 0 0 10px 0;
 	font-family: var(--font-heading);
 	font-size: 1.4rem;
 	color: #ffcc00;
+	
+	text-shadow:
+	2px 2px 0 #5a4300,
+	-1px -1px 0 rgba(255,226,138,0.8);
 }
 
 .manual-entry {
