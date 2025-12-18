@@ -511,6 +511,55 @@ main a:visited {
 }
 
 /* =========================
+   Minor Characters Gallery
+   ========================= */
+
+.minor-gallery {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	padding: 0 10px 0 10px;
+}
+
+.minor-gallery-grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+
+.minor-gallery figure {
+	margin: 0;
+}
+
+.minor-gallery a {
+	display: block;
+}
+
+.minor-gallery img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	display: block;
+
+	border: 1px solid #660000;
+}
+
+.minor-gallery a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.minor-gallery figcaption {
+	margin-top: 6px;
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+	text-align: center;
+}
+
+/* =========================
    Weapon Layout
    ========================= */
 
@@ -676,7 +725,7 @@ main a:visited {
 }
 
 .panel-stats-icon img {
-	max-width: 128px;
+	max-width: 129px;
 	height: auto;
 	box-shadow:
 	0 0 12px rgba(255, 255, 255, 0.6),
@@ -689,6 +738,15 @@ main a:visited {
 	gap: 0;
 }
 
+.panel-stats.stats-wide .stats-grid {
+  grid-template-columns: 160px 1fr;
+}
+
+.panel-stats.stats-wide .stat-value ul {
+  margin: 0px;
+  padding-left: 18px;
+}
+
 .panel-stats .stat-row {
 	display: contents;
 }
@@ -698,6 +756,13 @@ main a:visited {
 	padding: 10px 12px;
 	border-top: 1px solid #660000;
 	font-size: 0.95rem;
+	min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.panel-stats .stat-value ul {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
 }
 
 .panel-stats .stat-label {
