@@ -238,7 +238,6 @@ main h1,
 main h2,
 main h3 {
 	font-size: 2.5rem;
-	margin-top: 10px;
 	margin-bottom: 0.5em;
 	font-family: var(--font-heading);
 	letter-spacing: 0.02em;
@@ -247,6 +246,12 @@ main h3 {
 main h1 {
 	margin: 50px 0 50px 0;
 	text-align: center;
+}
+
+.header-extra-space {
+	margin-top: 100px;
+	box-shadow: 0px 0px 10px #fff;
+	border: 1px solid #fff;
 }
 
 main a {
@@ -281,7 +286,7 @@ main a:visited {
    ========================= */
    
 .contents {
-	margin-top: 60px;
+	margin-top: 24px;
 	position: relative;
 	overflow: hidden;
 	padding: 12px;
@@ -313,9 +318,9 @@ main a:visited {
 }
 
 .contents-title {
-	margin: 0 0 10px 0;
+	margin: 0px 0 10px 0;
 	font-family: var(--font-ui);
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	letter-spacing: 0.1em;
 	color: #ffcc00;
 	
@@ -325,6 +330,10 @@ main a:visited {
 	text-shadow:
 	2px 2px 0 #5a4300,
 	-1px -1px 0 rgba(255,226,138,0.8);
+}
+
+.contents-title--extramargin {
+	margin-top: 20px;
 }
 
 .contents-grid {
@@ -377,6 +386,27 @@ main a:visited {
 	.contents-grid {
 	grid-template-columns: 1fr;
 	}
+}
+
+/* =========================
+   Description box
+   ========================= */
+   
+.info-description {
+	margin-top: 18px;
+	padding: 14px 14px;
+}
+
+.info-description p {
+	margin: 0 0 12px 0;
+	font-family: var(--font-body);
+	font-size: 1.0rem;
+	color: #fff;
+	word-spacing: -0.1em;
+}
+
+.info-description p:last-child {
+	margin-bottom: 0;
 }
 
 /* =========================
@@ -660,23 +690,6 @@ main a:visited {
 }
 
 .manual-entry:last-child {
-	margin-bottom: 0;
-}
-
-.weapon-description {
-	margin-top: 18px;
-	padding: 14px 14px;
-}
-
-.weapon-description p {
-	margin: 0 0 12px 0;
-	font-family: var(--font-body);
-	font-size: 1.0rem;
-	color: #fff;
-	word-spacing: -0.1em;
-}
-
-.weapon-description p:last-child {
 	margin-bottom: 0;
 }
 
