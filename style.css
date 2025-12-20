@@ -91,6 +91,14 @@ a:hover {
 	color: #ff0000;
 }
 
+figcaption {
+	font-size: 0.8rem;
+	color: #aaa;
+	font-family: var(--font-heading);
+	padding-right: 20px;
+	text-align: center;
+}
+
 /* =========================
    Banner
    ========================= */
@@ -150,7 +158,7 @@ a:hover {
 	to bottom,
 	rgba(0, 0, 0, 0.0) 0px,
 	rgba(0, 0, 0, 0.0) 2px,
-	rgba(255, 0, 0, 0.25) 3px
+	rgba(255, 0, 0, 0.5) 3px
 	);
 
 	opacity: 1.0; /* overall strength */
@@ -235,10 +243,8 @@ main {
 }
 
 main h1,
-main h2,
-main h3 {
+main h2 {
 	font-size: 2.5rem;
-	margin-bottom: 0.5em;
 	font-family: var(--font-heading);
 	letter-spacing: 0.02em;
 }
@@ -248,10 +254,27 @@ main h1 {
 	text-align: center;
 }
 
-.header-extra-space {
-	margin-top: 100px;
+main h1.h1--tight {
+	margin-top: 0px;
+	margin-bottom: 24px;
+}
+
+main h3 {
+	margin-top: 8px;
+}
+
+.page-title {
 	box-shadow: 0px 0px 10px #fff;
 	border: 1px solid #fff;
+	
+	color: #ffffff;
+    text-shadow:
+		0 0 4px rgba(255, 255, 255, 0.6),
+		0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.page-title--extra-margin {
+	margin-top: 100px;
 }
 
 main a {
@@ -281,6 +304,10 @@ main a:visited {
 	-1px -1px 0 rgba(255,226,138,0.8);
 }
 
+.main-subtitle--tight {
+	margin: 0px;
+}
+
 /* =========================
    Contents Panel
    ========================= */
@@ -303,13 +330,6 @@ main a:visited {
 	position: absolute;
 	inset: 0;
 	pointer-events: none;
-	background: repeating-linear-gradient(
-	to bottom,
-	rgba(0, 0, 0, 0.0) 0px,
-	rgba(0, 0, 0, 0.0) 2px,
-	rgba(255, 0, 0, 0.18) 3px
-	);
-	opacity: 0.9;
 }
 
 .contents > * {
@@ -386,6 +406,75 @@ main a:visited {
 	.contents-grid {
 	grid-template-columns: 1fr;
 	}
+}
+
+/* =========================
+   Sub-page panel
+   ========================= */
+
+.subpage-panel {
+	width: min(560px, 100%);
+	margin: 16px auto;
+	padding: 12px;
+
+	display: grid;
+	grid-template-columns: 56px 1fr;
+	gap: 12px;
+	align-items: center;
+
+	border: 2px solid #660000;
+	background-color: #220000;
+
+	box-shadow:
+	inset 0 2px 0 rgba(255, 255, 255, 0.10),
+	inset 0 -2px 0 rgba(0, 0, 0, 0.65);
+}
+
+.subpage-icon {
+	display: grid;
+	place-items: center;
+	width: 56px;
+	height: 56px;
+	background: #000;
+	border: 1px solid #660000;
+	text-decoration: none;
+}
+
+.subpage-icon img {
+	width: 52px;
+	height: 52px;
+	object-fit: contain;
+	image-rendering: auto;
+}
+
+.subpage-link {
+	display: inline-block;
+	font-family: var(--font-ui);
+	font-size: 1.05rem;
+	letter-spacing: 0.06em;
+
+	color: #e9e900;
+	text-decoration: none;
+}
+
+.subpage-link:hover {
+	color: #ffff00;
+	text-decoration: none;
+	text-shadow: 0 0 10px rgba(255, 255, 0, 0.35);
+}
+
+.subpage-caption {
+	margin-top: 4px;
+	font-family: var(--font-heading);
+	font-size: 0.85rem;
+	color: #d0d0d0;
+	line-height: 1.3;
+}
+
+@media (max-width: 700px) {
+  .subpage-panel {
+    width: 100%;
+  }
 }
 
 /* =========================
@@ -714,7 +803,7 @@ main a:visited {
 	}
 }
 
-.weapon-video {
+.video-display {
 	width: 100%;
 	max-width: 550px;
 	display: block;
@@ -722,6 +811,22 @@ main a:visited {
 	border: 1px solid #660000;
 	background-color: #000;
 	margin-bottom: 4px;
+}
+
+.info-layout {
+	display: grid;
+	grid-template-columns: minmax(260px, 550px) 1fr;
+	gap: 16px;
+	align-items: start;
+}
+
+.info-media {
+	max-width: 550px;
+}
+
+.info-text p {
+	margin-top: 0;
+	font-size: 1.0em;
 }
 
 /* =========================
@@ -821,7 +926,7 @@ footer::before {
 	to bottom,
 	rgba(0, 0, 0, 0.0) 0px,
 	rgba(0, 0, 0, 0.0) 2px,
-	rgba(255, 0, 0, 0.25) 3px
+	rgba(255, 0, 0, 0.5) 3px
 	);
 
 	opacity: 1.0; /* overall strength */
@@ -1008,7 +1113,6 @@ footer .donate-link:hover {
 	grid-column: 3; /* center column */
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .film-row {
     grid-template-columns: repeat(2, 1fr);
@@ -1072,6 +1176,55 @@ footer .donate-link:hover {
 	color: #aaaaaa;
 }
 
+/* =========================
+   Button Code Presentation
+   ========================= */
+
+.code-title {
+	margin: 0 0 12px 0;
+	font-weight: 600;
+	font-family: var(--font-ui);
+	font-size: 1.2em;
+	letter-spacing: 0.1em; 
+}
+
+.code-caption {
+	margin: 0;
+	padding-bottom: 12px;
+	font-weight: 300;
+	font-family: var(--font-body);
+	font-size: 0.8em;
+}
+
+.code-list {
+	padding: 12px;
+	max-width: 300px;
+}
+
+.code-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 4px;
+	border-top: 1px solid rgba(102, 0, 0, 0.6);
+}
+
+.code-row:first-child {
+	border-top: none;
+}
+
+.code-panel-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 24px;
+
+	align-items: start;
+}
+
+/* =========================
+   N64 Buttons
+   ========================= */
+   
 .n64-btn {
 	display: inline-block;
 	min-width: 1.6em;
@@ -1110,22 +1263,23 @@ footer .donate-link:hover {
 	background-color: #e0c200;
 	border-color: #9a8700;
 	color: #000;
+	min-width: 2.4em;
 }
 
 .n64-btn-c-up::after {
-	content: " ▲";
+	content: "C ▲";
 }
 
 .n64-btn-c-down::after {
-	content: " ▼";
+	content: "C ▼";
 }
 
 .n64-btn-c-left::after {
-	content: " ◀";
+	content: "C ◀";
 }
 
 .n64-btn-c-right::after {
-	content: " ▶";
+	content: "C ▶";
 }
 
 .n64-btn-start {
@@ -1138,4 +1292,196 @@ footer .donate-link:hover {
 	background-color: #2a2a32;
 	border-color: #555566;
 	color: #ddd;
+}
+
+.n64-btn-l,
+.n64-btn-r,
+.n64-btn-lr {
+	background-color: #2a2a2a;
+	border-color: #555;
+	color: #ddd;
+	width: 4.2em;
+	padding: 1px 0; 
+	text-align: center;
+	border-radius: 10px 10px 4px 4px;
+}
+
+.n64-btn-dpad {
+	background-color: #2a2a2a;
+	border-color: #555;
+	color: #ddd;
+
+	min-width: 2.4em;
+	padding: 1px 6px;
+	height: auto;
+
+	position: static;
+}
+
+.n64-btn-dpad-up::after {
+	content: " D ▲";
+}
+
+.n64-btn-dpad-down::after {
+	content: " D ▼";
+}
+
+.n64-btn-dpad-left::after {
+	content: " D ◀";
+}
+
+.n64-btn-dpad-right::after {
+	content: " D ▶";
+}
+
+/* directions */
+.n64-btn-dpad-up::before    { transform: rotate(0deg); }
+.n64-btn-dpad-right::before { transform: rotate(90deg); }
+.n64-btn-dpad-down::before  { transform: rotate(180deg); }
+.n64-btn-dpad-left::before  { transform: rotate(270deg); }
+
+.n64-plus {
+	margin: 0 4px;
+	font-family: var(--font-ui);
+	font-weight: 700;
+	color: #ffffff;
+}
+
+/* =========================
+   Cheat Grid Table
+   ========================= */
+
+.cheat-grid {
+	font-family: var(--font-ui);
+	margin-top: 24px;
+	padding: 14px 14px;
+	background-color: #220000;
+	border: 2px solid #660000;
+}
+
+.cheat-table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #000;
+	border: 1px solid #660000;
+	overflow: hidden;
+}
+
+.cheat-table th,
+.cheat-table td {
+	padding: 6px 12px;
+	border-top: 1px solid #660000;
+	font-size: 0.95rem;
+	color: #e0e0e0;
+	vertical-align: top;
+}
+
+/* Brighter header row */
+.cheat-table thead th {
+	letter-spacing: 0.06em;
+	color: #fff;
+	text-align: left;
+
+	background-color: #400000;
+	border-bottom: 2px solid #800000;
+}
+
+/* Body rows */
+.cheat-table tbody td {
+	font-family: "JetBrains Mono", monospace;
+	background-color: #000;
+}
+
+/* Zebra striping (subtle) */
+.cheat-table tbody tr:nth-child(even) td {
+	background-color: rgba(34, 0, 0, 0.55);
+}
+
+/* Hover highlight */
+.cheat-table tbody tr:hover td {
+	background-color: rgba(255, 0, 0, 0.12);
+}
+
+@media (max-width: 700px) {
+  .cheat-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.difficulty {
+
+}
+
+.difficulty.agent {
+	color: #b8ffb8;
+}
+
+.difficulty.sa {
+	color: #fff0b3;
+}
+
+.difficulty.ooa {
+	color: #ffb3b3;
+}
+
+/* =========================
+   Rainbow Cheat Text
+   ========================= */
+
+.cheat-rainbow {
+	font-weight: 700;
+
+	background: linear-gradient(
+	90deg,
+	#ff0000,
+	#ff9900,
+	#ffff00,
+	#00ff00,
+	#00ffff,
+	#0000ff,
+	#cc00ff
+	);
+
+	background-size: 100% 100%;
+
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+
+	text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+}
+
+.back-link-wrap {
+	text-align: center;
+}
+
+.back-link {
+	display: inline-block;
+	margin: 24px auto 24px auto;
+
+	font-family: var(--font-ui);
+	font-size: 0.9rem;
+	letter-spacing: 0.06em;
+
+	color: #ffcc00;
+	text-decoration: none;
+
+	padding: 4px 10px;
+	border: 1px solid #660000;
+	background-color: #220000;
+
+	box-shadow:
+	inset 0 2px 0 rgba(255, 255, 255, 0.12),
+	inset 0 -2px 0 rgba(0, 0, 0, 0.7);
+}
+
+.back-link:hover {
+	color: #ffff00;
+	text-decoration: none;
+	box-shadow:
+	0 0 10px rgba(255, 0, 0, 0.6),
+	inset 0 2px 0 rgba(255, 255, 255, 0.12),
+	inset 0 -2px 0 rgba(0, 0, 0, 0.7);
 }
