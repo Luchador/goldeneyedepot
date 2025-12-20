@@ -304,6 +304,10 @@ main a:visited {
 	-1px -1px 0 rgba(255,226,138,0.8);
 }
 
+.main-subtitle--short {
+	margin-top: 24px;
+}
+
 .main-subtitle--tight {
 	margin: 0px;
 }
