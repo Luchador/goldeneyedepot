@@ -149,7 +149,7 @@
 		There are two variants of the attack - one animation slaps from the left and the other slaps from the right. The animation is selected purely at random.
         </p>
 		<p>
-		Unarmed is unique among GoldenEye weapons in that it has an alternate form. If the player has a <span class="yellow-text">Sniper Rifle</span> the hand will be replaced with the butt of the sniper rifle.
+		Unarmed is unique among GoldenEye weapons in that it has an alternate form. If the player has a <a href="#sniper" class="ge-link">Sniper Rifle</a> the hand will be replaced with the butt of the sniper rifle.
         </p>
 		<p>
 		Unarmed has no entry in the game's instruction booklet.
@@ -380,6 +380,9 @@
 			<p>
 			Only two NPCs use the PP7 in all of GoldenEye. One is the Russian Commandant in Bunker 1. The other is Boris in Control, but Boris fumbles his.
 			</p>
+			<p>
+			The game's internal name for the PP7 is "ppk".
+			</p>
 		</section>
 
 		<!-- Gallery Panel -->
@@ -450,6 +453,9 @@
 			</p>
 			<p>
 			The Silenced PP7 does the same amount of damage as the regular PP7. Despite the name, it actually does make noise when fired quickly, and rapid shots can alert enemies.
+			</p>
+			<p>
+			The game's internal name for the Silenced PP7 is "ppksil".
 			</p>
 		</section>
 
@@ -716,7 +722,8 @@
 			The KF7 Soviet is the bread and butter of <span class="gold-text"><em>GoldenEye 007</em></span> firearms. This ubiquitous rifle is found in the majority of levels. It's not terribly accurate when hip fired, but can make decent shots when zoomed in and fired singly.
 			</p>
 			<p>
-			The KF7 can be burst fired by tapping the <span class="n64-btn n64-btn-z">Z</span> button once when unzoomed. It becomes automatic when <span class="n64-btn n64-btn-z">Z</span> is held down.
+			The KF7 can be burst fired by tapping the <span class="n64-btn n64-btn-z">Z</span> button once when unzoomed. It becomes automatic when <span class="n64-btn n64-btn-z">Z</span> is held down, but the number of rounds expended
+			is always a multiple of 3. When zoomed it's possible to fire single shots or full automatic.
 			</p>
 			<p>
 			The game model is based on the Chinese <span class="yellow-text">Type 56-1</span> which has a fully hooded front sight. GoldenEye's variant has no stock and a muzzle brake somewhere between that of a Type 56 and an AK-74. The weapon is called "ak47" internally. Unlike most of GoldenEye's gun models, the KF7 actually has a trigger.
@@ -809,6 +816,9 @@
 			<p>
 			The ZMG is a compact weapon with a high rate of fire. It's based on the <span class="yellow-text">Micro Uzi</span>. It's one of the most favored weapons of the Janus Special Forces late in the game. 
 			</p>
+			<p>
+			The game's internal name for the ZMG is "uzi".
+			</p>
 		</section>
 
 		<!-- Gallery Panel -->
@@ -880,6 +890,9 @@
 			<p>
 			The D5K is an effective submachine gun with a steady rate of fire and better accuracy than the ZMG. It's based on the <span class="yellow-text">Heckler & Kock MP5K</span>, with the gun's name being a nod to its German orgin. It's mostly seen in the second half of the game, although it's possible to pick up 006's D5K after he "dies" or tosses it in Facility.
 			</p>
+			<p>
+			The game's internal name for the D5K is "mp5k".
+			</p>
 		</section>
 
 		<!-- Gallery Panel -->
@@ -933,6 +946,9 @@
 		<section class="info-description panel" aria-label="Weapon description">
 			<p>
 			As with the PP7, the silenced version of the D5K is considered an entirely separate weapon. In theory guards could use this weapon, but in practice none do in the vanilla game.
+			</p>
+			<p>
+			The game's internal name for the Silenced D5K is "mp5ksil".
 			</p>
 		</section>
 
@@ -1011,6 +1027,9 @@
 			<p>
 			For some reason the Phantom uses the same firing sound as the KF7.
 			</p>
+			<p>
+			The game's internal name for the Phantom is "spectre".
+			</p>
 		</section>
 
 		<!-- Gallery Panel -->
@@ -1083,10 +1102,10 @@
 			My personal favorite. This is the first weapon in the list with penetrating power. It has a very helpful zoom and a highly distinctive star-shaped muzzle flash. Game artist Adrian Smith used the movie <em>Heat</em> as reference for the muzzle flash.
 			</p>
 			<p>
-			The AR33 operates similarly to the KF7. A quick <span class="n64-btn n64-btn-z">Z</span> press while unzoomed fires a three round burst. Holding <span class="n64-btn n64-btn-z">Z</span> makes the rifle fully automatic.
+			The AR33 operates similarly to the <a href="#kf7" class="ge-link">KF7</a>. A quick <span class="n64-btn n64-btn-z">Z</span> press while unzoomed fires a three round burst. Holding <span class="n64-btn n64-btn-z">Z</span> makes the rifle fully automatic.
 			</p>
 			<p>
-			The AR33 is based on the real world <span class="yellow-text">M16A2</span> rifle.
+			The AR33 is based on the real world <span class="yellow-text">M16A2</span> rifle. The game's internal name for the weapon is "m16".
 			</p>
 		</section>
 
@@ -1178,6 +1197,9 @@
 			</p>
 			<p>
 			The RC-P90 is rare in single player. Xenia carries one along with a Grenade Launcher in Jungle. A couple guards towards the end of Caverns have them, as well as some of the infinite respawn guards that get activated when you enter the auto turret tunnel. There is also a RC-P90 hidden in a crate on Train when playing on Agent difficulty.
+			</p>
+			<p>
+			The game's internal name for the RC-P90 is "fnp90".
 			</p>
 		</section>
 
@@ -1456,13 +1478,17 @@
 		<!-- Description Panel -->
 		<section class="info-description panel" aria-label="Weapon description">
 			<p>
-			The Cougar Magnum is an extremely potent revolver, although the fire delay does take a bit of getting used to. The Cougar Magnum features an animated hammer and revolving cylinder. It, along with the Silver PP7, has the <span class="yellow-text">deepest penetration</span> in the game. It can fire through an astounding 10 objects!
+			The Cougar Magnum is an extremely potent revolver, although the fire delay does take a bit of getting used to. The Cougar Magnum features an animated hammer and revolving cylinder. It, along with the 
+			<a href="#silverpp7" class="ge-link">Silver PP7</a>, has the <span class="yellow-text">deepest penetration</span> in the game. It can fire through an astounding 10 objects!
 			</p>
 			<p>
-			The Cougar Magnum (or CMAG for short) is only carried by Natalya in Jungle and Control. If Natalya dies the Cougar Magnum is not dropped and it disappears along with her body.
+			The Cougar Magnum (or CMag for short) is only carried by Natalya in Jungle and Control. If Natalya dies the Cougar Magnum is not dropped and it disappears along with her body.
 			</p>
 			<p>
-			The CMAG is based on the <span class="yellow-text">Ruger Blackhawk</span>, a .357 magnum introduced in 1955.
+			The CMag is based on the <span class="yellow-text">Ruger Blackhawk</span>, a .357 magnum introduced in 1955.
+			</p>
+			<p>
+			The game's internal name for the CMag is "ruger".
 			</p>
 		</section>
 
@@ -1582,7 +1608,7 @@
 		<!-- Description Panel -->
 		<section class="info-description panel" aria-label="Weapon description">
 			<p>
-			The Silver PP7 is a reskin of the PP7, but has the damage and penetration properties of the <span class="yellow-text">Cougar Magnum</span>. It is only available with cheats.
+			The Silver PP7 is a reskin of the PP7 that has the damage and penetration properties of the <a href="#cmag" class="ge-link">Cougar Magnum</a>. It is only available with cheats.
 			</p>
 			<p>
 			There is no entry for the Silver PP7 in the game's instruction booklet.
@@ -1639,7 +1665,7 @@
 		<!-- Description Panel -->
 		<section class="info-description panel" aria-label="Weapon description">
 			<p>
-			The Gold PP7 is a reskin of the PP7. It does the same damage as the <span class="yellow-text">Golden Gun</span>. It is only available with cheats.
+			The Gold PP7 is a reskin of the PP7. It does the same damage as the <a href="#gg" class="ge-link">Golden Gun</a>. It is only available with cheats.
 			</p>
 			<p>
 			There is no entry for the Gold PP7 in the game's instruction booklet.
@@ -1847,7 +1873,7 @@
 			The Grenade Launcher is a container for six rounds of pure explosive joy. In my opinion it's one of the most fun weapons in <span class="gold-text"><em>GoldenEye 007</em></span>. Depending on the angle, Grenade Rounds can bounce multiple times before exploding. The launcher's cylinder rotates after every shot.
 			</p>
 			<p>
-			A Grenade Launcher sits on a crate in the Russian Commandant's hut on Surface 1. Some guards in Streets carry the Grenade Launcher. Xenia dual wields a Grenade Launcher and a RC-P90 on Jungle.
+			A Grenade Launcher sits on a crate in the Russian Commandant's hut on Surface 1. Some guards in Streets carry the Grenade Launcher. Xenia dual wields a Grenade Launcher and a <a href="#rcp90" class="ge-link">RC-P90</a> on Jungle.
 			</p>
 		</section>
 
@@ -2336,7 +2362,7 @@
 		<!-- Description Panel -->
 		<section class="info-description panel" aria-label="Weapon description">
 			<p>
-			This is a weird one. The Taser is a <span class="yellow-text">Game Boy-looking</span> weapon that can only be obtained with the All Guns cheat. The menu spells "Taser" with a 's' while the label on the model spells it with a 'z'.
+			This is a weird one. The Taser is a <span class="yellow-text">Game Boy-inspired</span> weapon that can only be obtained with the All Guns cheat. The menu spells "Taser" with a 's' while the label on the model spells it with a 'z'.
 			</p>
 			<p>
 			It has an embedded screen which plays an animated image of the Bond silhouette. Every <span class="n64-btn n64-btn-z">Z</span> press fires a single shot that does 1.0 damage and the Taser must be raised again before another shot can be fired. Unlike a real Taser, this one has unlimited range and energy.
