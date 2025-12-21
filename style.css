@@ -1565,6 +1565,10 @@ footer .donate-link:hover {
 	text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
 }
 
+/* =========================
+   Back links
+   ========================= */
+
 .back-link-wrap {
 	text-align: center;
 }
@@ -1660,6 +1664,10 @@ footer .donate-link:hover {
 	font-weight: 900;
 }
 
+/* =========================
+   Blog
+   ========================= */
+   
 .blog-panel {
   position: relative;
   background: #220000;
@@ -1726,4 +1734,127 @@ footer .donate-link:hover {
 	letter-spacing: 0.03em;
 
 	color: rgba(255, 226, 106, 0.85);
+}
+
+/* =========================
+   Levels
+   ========================= */
+   
+.hero-panel {
+  margin: 24px auto 28px auto;
+  max-width: 1100px;
+
+  background: #220000;
+  border: 6px double rgba(255, 0, 0, 0.35);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.85),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.18);
+
+  padding: 14px;
+}
+
+.hero-panel__img {
+  display: block;
+  margin: 8px auto;
+
+  height: auto;
+
+  max-height: 70vh;
+  object-fit: contain;
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 0 0 10px rgba(0,0,0,0.45);
+}
+
+.briefing {
+	margin: 18px auto 0 auto;
+	max-width: 1100px;
+
+	padding: 18px 14px;
+	background-color: #d1b675;
+	background-image: url("images/levels/manilla-bg.png");
+	background-repeat: repeat;
+	background-position: top left;
+	border: 2px solid #857349;
+}
+
+.mission-part {
+	padding-left: 16px;
+	font-weight: 600;
+	color: #000;
+	font-size: 1.5em;
+	line-height: 0.5;
+}
+
+.objectives {
+	margin: 0;
+	padding-left: 1.8em;
+
+	font-family: var(--font-body);
+	color: #000;
+	font-weight: 800;
+}
+
+.objectives li {
+	margin: 0 0 8px 0;
+}
+
+.briefing-page {
+	position: relative;
+	margin: 14px 0;
+	padding: 12px 16px;
+
+	background: rgba(227, 209, 159, 0.5);
+	border: 1px solid #7a6d46;
+	overflow: hidden;
+}
+
+.briefing-title {
+	background: rgba(227, 209, 159, 0.5);
+}
+
+.briefing-page::before { top: 0; }
+.briefing-page::after  { bottom: 0; }
+
+.briefing-header {
+	margin: 0;
+	padding: 6px 10px;
+
+	display: inline-block;
+
+	background: #ddd;
+	border: 1px solid rgba(255,255,255,0.18);
+	box-shadow: 0 0 6px rgba(0,0,0,0.8);
+
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+
+	color: #aa0000;
+}
+
+.briefing-rule {
+	height: 2px;
+	margin: 10px 0 12px 0;
+	background: rgba(0, 0, 0, 0.55);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+.briefing-body {
+	font-family: var(--font-body);
+	font-size: 1rem;
+	color: #000;
+	line-height: 1.45;
+	word-spacing: -0.05em;
+}
+
+.briefing-body p {
+	margin: 0 0 12px 0;
+	color: #000;
+}
+
+.briefing-body p:last-child {
+	margin-bottom: 0;
 }
