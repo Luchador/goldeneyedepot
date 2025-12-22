@@ -1677,20 +1677,21 @@ footer .donate-link:hover {
    ========================= */
    
 .blog-panel {
-  position: relative;
-  background: #220000;
+	margin-bottom: 16px;
+	position: relative;
+	background: #220000;
 
-  border: 6px double rgba(255, 0, 0, 0.35);
+	border: 6px double rgba(255, 0, 0, 0.35);
 
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.85),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.18);
+	box-shadow:
+		inset 0 0 0 1px rgba(0, 0, 0, 0.85),
+		inset 0 0 0 2px rgba(255, 255, 255, 0.18);
 
-  padding: 0;
+	padding: 0;
 }
 
 .blog-panel__header {
-  padding: 10px 14px 6px 14px;
+	padding: 10px 14px 6px 14px;
 }
 
 .blog-panel__meta {
@@ -1708,15 +1709,15 @@ footer .donate-link:hover {
 }
 
 .blog-panel__title {
-  opacity: 1;
+	opacity: 1;
 }
 
 .blog-panel__rule {
-  height: 2px;
-  margin: 0 14px;
-  background: rgba(255, 0, 0, 0.5);
+	height: 2px;
+	margin: 0 14px;
+	background: rgba(255, 0, 0, 0.5);
 
-  box-shadow: 0 0 6px rgba(255, 0, 0, 0.25);
+	box-shadow: 0 0 6px rgba(255, 0, 0, 0.25);
 }
 
 .blog-panel__signature {
@@ -1869,4 +1870,55 @@ footer .donate-link:hover {
 
 .briefing-body p:last-child {
 	margin-bottom: 0;
+}
+
+/* =========================
+   GE Text Dump Panel
+   ========================= */
+
+.ge-dump {
+	margin: 18px 0;
+	padding: 12px;
+
+	background-color: #0e0e0e;
+	border: 1px solid #660000;
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.ge-dump-hdr {
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid rgba(255, 0, 0, 0.35);
+}
+
+.ge-dump-title {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	color: #ffcc00;
+	letter-spacing: 0.10em;
+}
+
+.ge-dump-sub {
+	margin-top: 2px;
+	font-family: var(--font-heading);
+	font-size: 0.85rem;
+	color: #aaa;
+	letter-spacing: 0.08em;
+}
+
+.ge-dump-lines {
+	margin: 0;
+	padding-left: 2.5rem; /* make space for numbered list */
+	color: #e6e6e6;
+	line-height: 1.55;
+	font-size: 0.95rem;
+}
+
+.ge-dump-lines li {
+	margin: 0.15rem 0;
+}
+
+.ge-dump-lines li + li {
+
 }
