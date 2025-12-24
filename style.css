@@ -77,6 +77,10 @@ a {
 	text-decoration: none;
 }
 
+.bold-text {
+	font-weight: 800;
+}
+
 a:hover {
 	color: #ffff00;
 	text-decoration: underline;
@@ -1941,4 +1945,97 @@ footer .donate-link:hover {
 
 .ge-dump-lines li + li {
 
+}
+
+/* =========================
+   Music Grid
+   ========================= */
+   
+.ge-music-grid {
+	margin: 24px auto;
+	max-width: 1100px;
+}
+
+.ge-music-row {
+	display: grid;
+	grid-template-columns: 1.0fr 2fr 1.5fr;
+	gap: 12px;
+
+	align-items: center;
+
+	padding: 8px 10px;
+	font-size: 1.1rem;
+	border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.ge-music-row--tracks {
+	font-size: 1.0rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.ge-music-header {
+	border: none;
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: #eee;
+	pointer-events: none;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.ge-music-level {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #ffcc00;
+}
+
+.ge-music-entry {
+	color: #eee;
+	font-size: 1.2rem;
+}
+
+.ge-music-row:hover {
+	background: rgba(255, 0, 0, 0.08);
+}
+
+.ge-music-title {
+	font-family: var(--font-heading);
+	color: #ffcc00;
+	letter-spacing: 0.08em;
+}
+
+.ge-music-composer {
+	font-family: var(--font-heading);
+	font-size: 1.0rem;
+	color: #aaa;
+	text-align: right;
+}
+
+.ge-music-player audio {
+	width: 100%;
+	height: 32px;
+}
+
+@media (max-width: 720px) {
+	.ge-music-row {
+	grid-template-columns: 1fr;
+	gap: 6px;
+  }
+
+  .ge-music-composer {
+	text-align: left;
+	font-size: 0.85rem;
+	opacity: 0.85;
+  }
+}
+
+.ge-music-composer--red {
+	color: #ff4444;
+}
+
+.ge-music-composer--blue {
+	color: #44aaff;
+}
+
+.ge-music-composer--green {
+	color: #44ff88;
 }

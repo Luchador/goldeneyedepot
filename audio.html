@@ -17,6 +17,17 @@
 	family=Inter:wght@400;600;700&
 	family=JetBrains+Mono:wght@400;600&
 	display=swap" rel="stylesheet">
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll("audio").forEach(audio => {
+		  if (audio.volume === 1) {
+			audio.volume = 0.5;
+		  }
+		});
+		});
+	</script>
+	
 </head>
 <body>
 	<div class="site-frame">
@@ -48,12 +59,1405 @@
 	</nav>
 	<main>
 	
-		<h1>Audio</h1>
+		<div class="main-ornaments" aria-hidden="true">
+			<img src="images/turntables/turntable-note.gif" alt="" class="turntable turntable--left"/>
+			<img src="images/turntables/turntable-note.gif" alt="" class="turntable turntable--right"/>
+		</div>
+		
+		<h1 class="page-title">Music</h1>
 		
 		<p>
-		This page will be dedicated to GoldenEye's music and sound effects.
+			<span class="gold-text"><em>GoldenEye 007's</em></span> music was primarily composed by <a href="https://nintendo.fandom.com/wiki/Graeme_Norgate#Song_Credits"  target="_blank" rel="noopener">Graeme Norgate</a>
+			and <a href="https://nintendo.fandom.com/wiki/Grant_Kirkhope#:~:text=Main%20Title%20%2D%2D%20Arrangement,St." target="_blank" rel="noopener">Grant Kirkhope</a>. <a href="https://nintendo.fandom.com/wiki/Robin_Beanland" target="_blank" rel="noopener">Robin Beanland</a>,
+			who is now head of music at Rare, also chimed in with the elevator music for Control.
 		</p>
+		
+		<p>
+			Every level has a track composed for it. All levels except <span class="yellow-text">Jungle</span> play their track. Every level except <span class="yellow-text">Surface 1</span>
+			also has a higher energy variant of the main track called the X track. However, some levels do not use their X track. That is discussed farther down the page. 
+			<span class="yellow-text">Multiplayer selects a random track</span> to play. Immediately below is a list
+			of all tracks in the game and the composer for each.
+		</p>
+		
+		<p>
+			Bunker 1 and Bunker 2 have their X tracks flipped. That is to say, the song that sounds like it would be Bunker 1's X track is actually used for Bunker 2, and vice versa.
+		</p>
+		
+		<h2 class="main-subtitle">Track List</h2>
+				
+		<p>*One asterisk indicates the track is multiplayer only.</p>
+		<p>**Two asterisks indicate the track is not used at all.</p>
+		
+		<div class="hero-panel hero-panel--full">
+			<div class="ge-music-grid">
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Opening Logos
+					</div>
 
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/opening-logos.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Main Theme
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/maintheme.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Main Menu
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/main-menu.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Dam
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/dam.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Dam X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/damx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Wind Blowing (Dam Outro)
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/wind-blowing.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Facility
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/facility.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Facility X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/facilityx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					  Runway
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/runway.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Runway X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/runwayx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Runway Outro
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/runway-ending.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Surface 1
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/surface1.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Bunker 1
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/bunker1.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Bunker 1 X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/bunker1x.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Silo
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/silo.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Silo X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/silox.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Frigate
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/frigate.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Frigate X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/frigatex.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Frigate Outro**
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/frigate-ending.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Surface 2
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/surface2.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Surface 2 X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/surface2x.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Surface 2 Outro
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/surface2-ending.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Bunker 2
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/bunker2.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Bunker 2 X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/bunker2x.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Statue
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/statue.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Statue X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/statuex.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Statue Outro
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/statue-ending.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Archives
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/archives.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Archives X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/archivesx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Streets
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/streets.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Streets X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/streetsx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Depot
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/depot.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+			
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Depot X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/depotx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Train
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/train.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Train X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/trainx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Jungle*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/jungle.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Jungle X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/junglex.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Jungle Ambience
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/jungle-ambience.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Control
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/control.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+							
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Control X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/controlx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Control Elevator
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/control-elevator.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--green">
+						Robin Beanland
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Caverns
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/caverns.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Caverns X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/cavernsx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Caverns Elevator
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/caverns-elevator.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Cradle
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/cradle.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Cradle X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/cradlex.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Aztec
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/aztec.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Aztec X
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/aztecx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Egyptian
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/egyptian.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Egyptian X*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/egyptianx.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Credits
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/credits.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Citadel
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/citadel.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Perimeter
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/perimeter.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Watch Music
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/watch-music.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--blue">
+						Grant Kirkhope
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Killed in Action (Single Player)
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/kia2.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Killed in Action (Multiplayer)*
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/mp-death.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Killed in Action (Alternate)**
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/kia.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+				<div class="ge-music-row">
+					<div class="ge-music-title">
+					Guitar Gliss**
+					</div>
+
+					<div class="ge-music-player">
+						<audio controls preload="none">
+							<source src="audio/music/guitar-gliss.mp3" type="audio/mpeg">
+						</audio>
+					</div>
+
+					<div class="ge-music-composer ge-music-composer--red">
+						Graeme Norgate
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<h2 class="main-subtitle">Level Assignments</h2>
+		
+		<p>
+			<span class="gold-text"><em>GoldenEye 007's</em></span> engine supports two tracks per level and optionally a background sound. The level designer uses Action Blocks to tell the game 
+			when the main track should play and when the X track should play. For some levels this means playing the main track first then switching to the X track at a tense moment e.g. when Bond confronts
+			Trevelyan, Xenia, and Ourumov in Train. For other levels such as Control and Caverns the X track is elevator music and the levels switch to the main track upon the player exiting the elevator.
+		</p>
+		
+		<p>
+			Although Frigate and Egyptian do have X tracks assigned, these tracks are never actually triggered to play, so you don't hear them. The Egyptian X track can still play randomly in multiplayer.
+		</p>
+		
+		<p>
+			The unused Citadel level does have a track assigned, although of course you can't load the level to hear it without hacking or modding the game. The Citadel song does have a chance of playing
+			randomly in multiplayer.
+		</p>
+		
+		<div class="hero-panel hero-panel--full">
+			<div class="ge-music-grid">
+			
+				<div class="ge-music-row ge-music-header">
+					<div class="ge-music-header">
+					Level
+					</div>
+
+					<div class="ge-music-header">
+					Track 1
+					</div>
+
+					<div class="ge-music-header">
+					Track 2 (X)
+					</div>
+					
+					<div class="ge-music-header">
+					Background
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Dam
+					</div>
+
+					<div class="ge-music-entry">
+					Dam
+					</div>
+
+					<div class="ge-music-entry">
+					Wind Blowing
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Facility
+					</div>
+
+					<div class="ge-music-entry">
+					Facility
+					</div>
+
+					<div class="ge-music-entry">
+					Facility X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Runway
+					</div>
+
+					<div class="ge-music-entry">
+					Runway
+					</div>
+
+					<div class="ge-music-entry">
+					Runway Outro
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Surface 1
+					</div>
+
+					<div class="ge-music-entry">
+					Surface 1
+					</div>
+
+					<div class="ge-music-entry">
+					Wind Blowing
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Bunker 1
+					</div>
+
+					<div class="ge-music-entry">
+					Bunker 1
+					</div>
+
+					<div class="ge-music-entry">
+					Bunker 1 X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Silo
+					</div>
+
+					<div class="ge-music-entry">
+					Silo
+					</div>
+
+					<div class="ge-music-entry">
+					Silo X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Frigate
+					</div>
+
+					<div class="ge-music-entry">
+					Frigate
+					</div>
+
+					<div class="ge-music-entry">
+					Frigate Outro
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Surface 2
+					</div>
+
+					<div class="ge-music-entry">
+					Surface 2
+					</div>
+
+					<div class="ge-music-entry">
+					Surface 2 Outro
+					</div>
+					
+					<div class="ge-music-entry">
+					Wind Blowing
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Bunker 2
+					</div>
+
+					<div class="ge-music-entry">
+					Bunker 2
+					</div>
+
+					<div class="ge-music-entry">
+					Bunker 2 X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Statue
+					</div>
+
+					<div class="ge-music-entry">
+					Statue
+					</div>
+
+					<div class="ge-music-entry">
+					Statue Outro
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Archives
+					</div>
+
+					<div class="ge-music-entry">
+					Archives
+					</div>
+
+					<div class="ge-music-entry">
+					Archives X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Streets
+					</div>
+
+					<div class="ge-music-entry">
+					Streets
+					</div>
+
+					<div class="ge-music-entry">
+					Streets X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Depot
+					</div>
+
+					<div class="ge-music-entry">
+					Depot
+					</div>
+
+					<div class="ge-music-entry">
+					Depot X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Train
+					</div>
+
+					<div class="ge-music-entry">
+					Train
+					</div>
+
+					<div class="ge-music-entry">
+					Train X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Jungle
+					</div>
+
+					<div class="ge-music-entry">
+					Jungle Ambience
+					</div>
+
+					<div class="ge-music-entry">
+					Jungle X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Control
+					</div>
+
+					<div class="ge-music-entry">
+					Control
+					</div>
+
+					<div class="ge-music-entry">
+					Control Elevator
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Caverns
+					</div>
+
+					<div class="ge-music-entry">
+					Caverns
+					</div>
+
+					<div class="ge-music-entry">
+					Caverns Elevator
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Cradle
+					</div>
+
+					<div class="ge-music-entry">
+					Cradle
+					</div>
+
+					<div class="ge-music-entry">
+					Cradle X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Aztec
+					</div>
+
+					<div class="ge-music-entry">
+					Aztec
+					</div>
+
+					<div class="ge-music-entry">
+					Aztec X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Egyptian
+					</div>
+
+					<div class="ge-music-entry">
+					Egyptian
+					</div>
+
+					<div class="ge-music-entry">
+					Egyptian X
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Cuba (Credits)
+					</div>
+
+					<div class="ge-music-entry">
+					Credits
+					</div>
+
+					<div class="ge-music-entry">
+					
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+				<div class="ge-music-row ge-music-row--tracks">
+					<div class="ge-music-level">
+					Citadel
+					</div>
+
+					<div class="ge-music-entry">
+					Citadel
+					</div>
+
+					<div class="ge-music-entry">
+					
+					</div>
+					
+					<div class="ge-music-entry">
+					
+					</div>
+				</div>
+				
+			</div>
+		</div>
 	</main>
 
 	<footer>
