@@ -2039,3 +2039,57 @@ footer .donate-link:hover {
 .ge-music-composer--green {
 	color: #44ff88;
 }
+
+/* --- Manual Reader (Vertical) --- */
+
+.manual__header {
+	margin: 0 auto 2rem;
+	text-align: center;
+}
+
+.manual__meta {
+	color: #aaa;
+	font-size: 0.95rem;
+}
+
+.manual__pages {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.manual__page {
+	margin: 2.5rem 0;
+}
+
+.page {
+	background: #330000;
+	padding: 14px;
+	border-radius: 10px;
+	box-shadow:
+		0 10px 30px rgba(0,0,0,0.5),
+		inset 0 0 0 1px rgba(255,255,255,0.06);
+	align-items: center;
+}
+
+.page__link {
+	display: flex;
+	justify-content: center;
+}
+
+.page__img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	max-height: 90vh;
+	object-fit: contain;
+	background: #000;
+}
+
+.page__caption {
+	margin-top: 10px;
+	font-size: 0.95rem;
+	color: #aaa;
+	text-align: center;
+}
