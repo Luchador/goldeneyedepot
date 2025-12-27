@@ -12,11 +12,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?
-	family=Orbitron:wght@400;600;700&
-	family=Inter:wght@400;600;700&
-	family=JetBrains+Mono:wght@400;600&
-	display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="site-frame">
@@ -48,11 +44,26 @@
 	</nav>
 	<main>
 	
-		<h1>GoldenEye Bugs</h1>
+		<h1 class="page-title">GoldenEye Bugs</h1>
 		
-		<p>
-		This page will be about bugs and glitches in GoldenEye.
-		</p>
+		<section class="info-description panel" aria-label="KF7 and AR33 bug description">
+			<h3>1. Wrong Weapon Model</h3>
+			<div class="info-layout">
+				<div class="info-media">
+					<video class="video-display" controls preload="metadata">
+						<source src="videos/kf7-ar33-bug.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+
+				<div class="info-text">
+					<p>
+					Start any multiplayer game using the <span class="yellow-text">Remote Mines or Timed Mines</span> weapon sets. The AR33 pickups
+					will use the KF7 model on the ground. When you pick them up they'll still act like normal AR33s.
+					</p>
+				</div>
+			</div>
+		</section>
 
 	</main>
 

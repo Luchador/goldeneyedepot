@@ -87,15 +87,13 @@ a:hover {
 }
 
 a.ge-link {
+	display: inline-block;
 	color: #ff4444;
 	text-decoration: none;
 	position: relative;
 	font-weight: 800;
 	letter-spacing: 0.06em;
-
-	transition:
-		color 0.15s linear,
-		text-shadow 0.15s linear;
+	transition: color 0.15s linear, text-shadow 0.15s linear;
 }
 
 
@@ -164,6 +162,11 @@ a.ge-link:visited::after {
 
 .red-text {
 	color: #ff0000;
+}
+
+.image-centered {
+	display: block;
+	margin: 0 auto;
 }
 
 figcaption {
@@ -338,7 +341,21 @@ main h1.h1--tight {
 }
 
 main h3 {
-	margin-top: 8px;
+	margin: 8px 0 14px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #660000;
+}
+
+main h3::before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	background: #aa0000;
+	margin-right: 10px;
+	transform: translateY(-2px);
 }
 
 .page-title {
@@ -544,7 +561,7 @@ main a:visited {
 	padding: 12px;
 
 	display: grid;
-	grid-template-columns: 56px 1fr;
+	grid-template-columns: 96px 1fr;
 	gap: 12px;
 	align-items: center;
 
@@ -559,24 +576,31 @@ main a:visited {
 .subpage-icon {
 	display: grid;
 	place-items: center;
-	width: 56px;
-	height: 56px;
+	width: 96px;
+	height: 96px;
 	background: #000;
 	border: 1px solid #660000;
 	text-decoration: none;
 }
 
 .subpage-icon img {
-	width: 52px;
-	height: 52px;
+	width: 96px;
+	height: 96px;
 	object-fit: contain;
 	image-rendering: auto;
+	transition: filter 120ms ease;
+}
+
+.subpage-icon:hover img {
+	filter:
+		drop-shadow(0 0 3px rgba(255, 0, 0, 0.6))
+		drop-shadow(0 0 6px rgba(255, 0, 0, 0.35));
 }
 
 .subpage-link {
 	display: inline-block;
 	font-family: var(--font-ui);
-	font-size: 1.05rem;
+	font-size: 1.25rem;
 	letter-spacing: 0.06em;
 
 	color: #e9e900;
@@ -592,7 +616,7 @@ main a:visited {
 .subpage-caption {
 	margin-top: 4px;
 	font-family: var(--font-heading);
-	font-size: 0.85rem;
+	font-size: 1.0rem;
 	color: #d0d0d0;
 	line-height: 1.3;
 }
@@ -937,6 +961,7 @@ main a:visited {
 	display: block;
 
 	border: 1px solid #660000;
+	border-bottom: 2px solid #660000;
 	background-color: #000;
 	margin-bottom: 4px;
 }
@@ -946,10 +971,17 @@ main a:visited {
 	grid-template-columns: minmax(260px, 550px) 1fr;
 	gap: 16px;
 	align-items: start;
+	padding-bottom: 12px;
 }
 
 .info-media {
 	max-width: 550px;
+}
+
+.info-media img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 .info-text p {
@@ -1343,6 +1375,89 @@ footer .donate-link:hover {
 	gap: 24px;
 
 	align-items: start;
+}
+
+/* =========================
+   MP Weapon Sets
+   ========================= */
+
+.mp-weapon-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	background-color: #220000;
+	border: 2px solid #660000;
+	padding: 12px;
+	
+	max-width: 500px;
+	margin: 24px auto;
+}
+
+.mp-set-slot {
+	font-family: var(--font-ui);
+	letter-spacing: 0.1em;
+	font-size: 0.85em;
+	color: #ccaaaa;
+	white-space: nowrap;
+}
+
+.mp-set-row {
+	display: grid;
+	grid-template-columns: 1.0fr 1.0fr 1.0fr;
+	gap: 24px;
+
+	align-items: center;
+
+	padding: 8px 10px;
+	margin: 0px 12px;
+	font-size: 1.1rem;
+	border: 1px solid #660000;
+	box-shadow:
+		inset 0 2px 0 rgba(255, 255, 255, 0.10),
+		inset 0 -2px 0 rgba(0, 0, 0, 0.65);
+		
+	position: relative;
+	overflow: hidden;
+}
+
+.mp-set-row::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+
+	/* Interpolate from cool (blue-white) to warm (red) */
+	background: color-mix(
+		in srgb,
+		rgba(180, 220, 255, 0.10) calc((1 - var(--rarity, 0)) * 100%),
+		rgba(255, 80, 80, 0.10) calc(var(--rarity, 0) * 100%)
+		);
+}
+
+.mp-set-row > * {
+	position: relative;
+}
+
+.mp-set-row:hover::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: rgba(255, 0, 0, 0.08);
+}
+.mp-set-title {
+	margin: 0 0 16px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #660000;
+
+	font-weight: 800;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.mp-set-icon {
+	width: 96px;
+	height: 96px;
 }
 
 /* =========================
@@ -1797,11 +1912,6 @@ footer .donate-link:hover {
 
 .hero-panel-wrap {
 	text-align: center;
-}
-
-.hero-panel--full {
-	display: block;
-	max-width: 1100px;
 }
 
 .briefing {
