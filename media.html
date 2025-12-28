@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
 <body>
 	<div class="site-frame">
 	<header class="site-banner">
-	  <img class="banner-bg" src="images/banner.jpg" alt="GoldenEye Depot banner">
-	  <img class="banner-logo" src="images/logo.png" alt="The GoldenEye Depot">
+	  <img class="banner-bg" src="/images/banner.jpg" alt="GoldenEye Depot banner">
+	  <img class="banner-logo" src="/images/logo.png" alt="The GoldenEye Depot">
 	</header>
 	<nav class="site-nav">
 		<ul>
@@ -44,7 +44,20 @@
 	</nav>
 	<main>
 	
-		<h1 class="page-title">Media</h1>
+		<h1 class="page-title page-title--extra-margin">Media</h1>
+		
+		<h2 class="main-subtitle">Subpages</h2>
+		
+		<div class="subpage-panel panel">
+			<a class="subpage-icon" href="/media/promo-mailer/promo-mailer.html">
+				<img src="/images/promo-mailer-icon.jpg" alt="promo mailer icon">
+			</a>
+
+			<div class="subpage-text">
+				<a class="subpage-link" href="/media/promo-mailer/promo-mailer.html">Promotional Mailer</a>
+				<div class="subpage-caption">Game hype packet.</div>
+			</div>
+		</div>
 		
 		<h2 id="promos" class="main-subtitle">Promotional Renders</h2>
 		<p>
@@ -160,7 +173,7 @@
 		</div>
 	</footer>
 	<div class="site-bottom-banner">
-		<img src="images/banner_bottom.jpg" alt="">
+		<img src="/images/banner_bottom.jpg" alt="">
 	</div>
 	</div>
 </body>
