@@ -46,10 +46,51 @@
 	
 		<h1 class="page-title page-title--extra-margin">Game Mechanics</h1>
 		
-		<p>
-		This page will be about GoldenEye's game mechanics.
-		</p>
-
+		<h2 class="main-subtitle">Enemy Health and Armor</h2>
+				
+		<section class="info-description panel" aria-label="weapon sets description">
+			<h3>Damage Accumulation</h3>
+			<p>
+				Intuitively you would think characters have a certain amount of health and their health decreases when they take damage. When health reaches 0 or below, they die. That is <em>not</em> how it works in GoldenEye.
+			</p>
+			<p>
+				Instead, <span class="yellow-text">characters start with zero damage and accumulate damage until it passes a threshold.</span> Once the amount of damage accumulated reaches at or above that threshold, the character dies. You can think of the
+				threshold as the character's health.
+			</p>
+			<p>
+				Standard characters on 00 Agent have 4.0 health. The amount of damage done gets multiplied depending on where you hit. These are the multipliers:
+				<ul>
+					<li>1.0x for limb shots</li>
+					<li>2.0x for body shots</li>
+					<li>4.0x for head shots</li>
+				</ul>
+			</p>
+			<p>
+				Most guns (PP7, D5K, KF7, etc...) do 1.0 damage. Thus, to kill most guards on 00 Agent with these guns, you need:
+				<ul>
+					<li>4 limbs shots OR</li>
+					<li>2 body shots OR</li>
+					<li>1 head shot</li>
+				</ul>
+			</p>
+			<h3>Body Armor</h3>
+			<p>
+				Characters don't have a separate variable for their armor. The way characters get armor is <span class="yellow-text">by setting their damage accumulation variable to a negative value.</span> When the damage accumulation is below zero,
+				the game treats that character as if they have armor. Once enough damage is accumulated to go over 0, the character has no armor left.
+			</p>
+			<h3>Demonstration</h3>
+			<p>
+				We'll use Jaws on 00 Agent as a test subject. Keep an eye on the damage accumulation variable on the lower right. Notice how shots on different parts of the body cause him to accumulate different amounts of damage.
+				Also note how he doesn't get bloody or do wounded animations until damage accumulation goes above zero, which is when his armor is gone.
+			</p>
+			<div class="info-media">
+					<video class="video-display" controls preload="metadata">
+						<source src="/videos/jaws-health-demo.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			
+		</section>
 	</main>
 
 	<footer>
