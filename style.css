@@ -169,6 +169,11 @@ a.ge-link:visited::after {
 	margin: 0 auto;
 }
 
+.image-red-border {
+	border: 1px solid #660000;
+	margin-bottom: 4px;
+}
+
 figcaption {
 	font-size: 0.8rem;
 	color: #aaa;
@@ -675,6 +680,10 @@ main a:visited {
 	margin-bottom: 0;
 }
 
+.info-description ul li {
+	padding-bottom: 8px;
+}
+
 /* =========================
    Image Gallery
    ========================= */
@@ -1011,6 +1020,10 @@ main a:visited {
 	height: auto;
 }
 
+.info-media a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
 .info-text p {
 	margin-top: 0;
 	font-size: 1.0em;
@@ -1081,6 +1094,13 @@ main a:visited {
 .panel-stats .stat-value {
 	color: #e0e0e0;
 	background-color: #000;
+}
+
+.panel-stats.panel-centered {
+	max-width: 500px;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 /* =========================
@@ -1305,6 +1325,14 @@ footer .donate-link:hover {
 }
 
 .level-tile-cradle {
+	grid-column: 4;
+}
+
+.level-tile-training {
+	grid-column: 3;
+}
+
+.level-tile-citadel {
 	grid-column: 4;
 }
 
@@ -2241,4 +2269,46 @@ footer .donate-link:hover {
 	font-size: 0.95rem;
 	color: #aaa;
 	text-align: center;
+}
+
+.timeline {
+	list-style: none;
+	margin: 12px 0 0 0;
+	padding: 0 0 0 12px;
+}
+
+.timeline li {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	gap: 12px;
+	padding: 10px 0 10px 16px;
+	position: relative;
+}
+
+.timeline li::before {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: 16px;
+	width: 10px;
+	height: 10px;
+	background: #660000;
+	border-radius: 50%;
+}
+
+.timeline-date {
+	font-family: var(--font-ui);
+	font-size: 0.9rem;
+	color: #c0c0c0;
+	white-space: nowrap;
+}
+
+.timeline-event {
+	color: #e0e0e0;
+	line-height: 1.4;
+}
+
+.timeline-release .timeline-date {
+	color: #f0c060;
+	font-weight: bold;
 }

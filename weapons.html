@@ -58,21 +58,40 @@
 			This page lists the weapons in the order they appear in the Pause Menu. Special thanks to the <a href="https://www.imfdb.org/wiki/GoldenEye_007">Internet Movie Firearms Database</a> and its contributors which I used as a source for some information. 
 			Also thanks to <span class="red-text">Subdrag</span> and other contributors of the <a href="https://github.com/carnivoroussociety/GoldEditor">GoldenEye Setup Editor</a>. I used it to find the exact data for weapon statistics.
 		</p>
-		<p>
-			The <span class="red-text">Penetration</span> value refers to how many objects it takes to stop a bullet. Objects include things like characters, doors, and crates, but <em>not</em> most walls. 
-			A value of 1 means the bullet stops at the first object. A value of 2 means the bullet damages the first object it hits then passes through and has the ability to damage another object behind it. 
-			A value of 3 means it hits and damages 2 objects then stops at the third object, etc...
-		</p>
-		<p>
-			I believe <span class="red-text">Rate of Fire</span> is the number of frames between shots when holding down <span class="n64-btn n64-btn-z">Z</span>. Thus the lower the value, the faster the weapon fires. <span class="red-text">TODO: </span>verify this.
-		</p>
-		<p>
-			<span class="red-text">Inaccuracy</span> is the spread of fired shots. Zero is perfectly accurate. The higher the value, the higher the spread.
-		</p>
-		<p>
-			<span class="red-text">Loudness (Min/Max)</span> has nothing to do with volume of the sound effect. This value tells the game how much noise firing the weapon makes to guards. I believe that the min value is the noise made when fired once, while the max value
-			is the noise made after the weapon is fired a certain number of times in a row. <span class="red-text">TODO: </span>look into the game's code and find the formula for this.
-		</p>
+		<section class="info-description panel" aria-label="camera zoom fact">
+			<h3>Explanation of Terms</h3>
+			<ul>
+				<li>
+					<p>
+						All hitscan weapons have a baseline for the amount of damage they do. How that damage is applied depends on where the object or character is hit. See <a href="mechanics.html#charhealth" class="ge-link"> this page</a> for an
+						explanation of how damage is applied to characters.
+					</p>
+				</li>
+				<li>
+					<p>
+						The <span class="red-text">Penetration</span> value refers to how many objects it takes to stop a bullet. Objects include things like characters, doors, and crates, but <em>not</em> most walls. 
+						A value of 1 means the bullet stops at the first object. A value of 2 means the bullet damages the first object it hits then passes through and has the ability to damage another object behind it. 
+						A value of 3 means it hits and damages 2 objects then stops at the third object, etc...
+					</p>
+				</li>
+				<li>
+					<p>
+						I believe <span class="red-text">Rate of Fire</span> is the number of frames between shots when holding down <span class="n64-btn n64-btn-z">Z</span>. Thus the lower the value, the faster the weapon fires. <span class="red-text">TODO: </span>verify this.
+					</p>
+				</li>
+				<li>
+					<p>
+						<span class="red-text">Inaccuracy</span> is the spread of fired shots. Zero is perfectly accurate. The higher the value, the higher the spread.
+					</p>
+				</li>
+				<li>
+					<p>
+						<span class="red-text">Loudness (Min/Max)</span> has nothing to do with volume of the sound effect. This value tells the game how much noise firing the weapon makes to guards. I believe that the min value is the noise made when fired once, while the max value
+						is the noise made after the weapon is fired a certain number of times in a row. <span class="red-text">TODO: </span>look into the game's code and find the formula for this.
+					</p>
+				</li>
+			</ul>
+		</section>
 
 		<section class="contents panel" aria-label="Weapons contents">
 			<h2 class="contents-title">Contents</h2>
@@ -115,20 +134,20 @@
 
 		<h2 id="unarmed" class="main-subtitle">Unarmed</h2>
 		<section class="weapon-top">
-				<!-- Stats Panel -->
-				<div class="panel-stats panel" aria-label="Weapon statistics">
+			<!-- Stats Panel -->
+			<div class="panel-stats panel" aria-label="Weapon statistics">
 				<div class="stats-grid">
-				<div class="stat-label">Damage</div><div class="stat-value">2.0</div>
-				<div class="stat-label">Penetration</div><div class="stat-value">1</div>
-				<div class="stat-label">Ammo Type</div><div class="stat-value">N/A</div>
-				<div class="stat-label">Magazine</div><div class="stat-value">Unlimited</div>
-				<div class="stat-label">Max Reserve</div><div class="stat-value">N/A</div>
-				<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
-				<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/1.0</div>
-				<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
-				<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
-				<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
-				<div class="stat-label">Location</div><div class="stat-value">All levels</div>
+					<div class="stat-label">Damage</div><div class="stat-value">2.0</div>
+					<div class="stat-label">Penetration</div><div class="stat-value">1</div>
+					<div class="stat-label">Ammo Type</div><div class="stat-value">N/A</div>
+					<div class="stat-label">Magazine</div><div class="stat-value">Unlimited</div>
+					<div class="stat-label">Max Reserve</div><div class="stat-value">N/A</div>
+					<div class="stat-label">Rate of Fire</div><div class="stat-value">N/A</div>
+					<div class="stat-label">Loudness (Min/Max)</div><div class="stat-value">0.0/1.0</div>
+					<div class="stat-label">Inaccuracy</div><div class="stat-value">0.0</div>
+					<div class="stat-label">Zoom</div><div class="stat-value">1.0x</div>
+					<div class="stat-label">Dual Wield</div><div class="stat-value">No</div>
+					<div class="stat-label">Location</div><div class="stat-value">All levels</div>
 				</div>
 			</div>
 
