@@ -66,6 +66,10 @@ body {
 	background-color: #220000;
 }
 
+.panel p {
+	margin: 0 0 1rem;
+}
+
 p {
 	line-height: 1.5;
 	font-size: 1.0rem;
@@ -84,6 +88,10 @@ a {
 a:hover {
 	color: #ffff00;
 	text-decoration: underline;
+}
+
+a.ge-image-link:hover {
+	text-decoration: none;
 }
 
 a.ge-link {
@@ -164,6 +172,11 @@ a.ge-link:visited::after {
 	color: #ff0000;
 }
 
+.green-text {
+	color: #00ff00;
+	font-weight: bold;
+}
+
 .image-centered {
 	display: block;
 	margin: 0 auto;
@@ -172,6 +185,10 @@ a.ge-link:visited::after {
 .image-red-border {
 	border: 1px solid #660000;
 	margin-bottom: 4px;
+}
+
+.image-mt-12 {
+	margin-top: 12px;
 }
 
 figcaption {
@@ -667,7 +684,8 @@ main a:visited {
 }
 
 .info-description h2,
-.info-description h3 {
+.info-description h3,
+.image-gallery h3 {
 	margin: 8px 0 14px;
 	font-weight: 700;
 	letter-spacing: 0.08em;
@@ -676,7 +694,8 @@ main a:visited {
 }
 
 .info-description h2::before,
-.info-description h3::before {
+.info-description h3::before,
+.image-gallery h3::before {
 	content: "";
 	display: inline-block;
 	width: 6px;
@@ -713,13 +732,6 @@ main a:visited {
 	padding: 5px;
 }
 
-.image-gallery h3 {
-	font-family: var(--font-heading);
-	font-size: 1.4rem;
-	color: #ffcc00;
-	padding: 0 12px;
-}
-
 .image-gallery p {
 	padding: 0 12px;
 }
@@ -731,12 +743,13 @@ main a:visited {
 	align-items: start;
 }
 
-.image-gallery figure {
-	margin: 0;
+.image-gallery .gallery-grid h3 {
+	grid-column: 1 / -1;
+	margin-top: 6px;
 }
 
-.image-gallery a {
-	display: block;
+.image-gallery figure {
+	margin: 0;
 }
 
 .image-gallery img {
@@ -1777,6 +1790,10 @@ footer .donate-link:hover {
 	color: #ffb3b3;
 }
 
+.difficulty.oo7 {
+	color: #b3d9ff;
+}
+
 /* =========================
    Rainbow Cheat Text
    ========================= */
@@ -2394,4 +2411,23 @@ footer .donate-link:hover {
 	height: 10px;
 	transform: translate(-50%, -50%) rotate(45deg);
 	background: #660000;
+}
+
+.model-meta {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 12px;
+	row-gap: 4px;
+	margin: 8px 0px;
+}
+
+.model-meta dt {
+	font-weight: 700;
+	color: #ffcc00;
+}
+
+.model-meta {
+	padding: 8px 12px;
+	border-left: 1px solid #660000;
+	background: rgba(0, 0, 0, 0.25);
 }
