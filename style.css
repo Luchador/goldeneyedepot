@@ -438,6 +438,11 @@ main a:visited {
 	margin: 0px;
 }
 
+.main-subtitle--centered {
+	text-align: center;
+}
+
+
 .main-ornaments {
 	position: relative;
 	height: calc(var(--turntable-size) + (var(--turntable-pad-y) * 2));
@@ -739,7 +744,8 @@ main a:visited {
 .image-gallery .gallery-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 10px;
+	column-gap: 10px;
+	row-gap: 48px;
 	align-items: start;
 }
 
@@ -750,6 +756,7 @@ main a:visited {
 
 .image-gallery figure {
 	margin: 0;
+	position: relative;
 }
 
 .image-gallery img {
@@ -781,6 +788,14 @@ main a:visited {
 .image-gallery.image-gallery--centered img {
 	display: block;
 	margin: 0 auto;
+}
+
+.image-gallery .gallery-separator {
+    grid-column: 1 / -1;
+    border: 0;
+    border-top: 1px solid #660000;
+    height: 0;
+    width: 100%;
 }
 
 /* =========================
@@ -2025,7 +2040,7 @@ footer .donate-link:hover {
 
 	max-height: 70vh;
 
-	border: 1px solid rgba(255, 255, 255, 0.20);
+	border: 1px solid #660000;
 	box-shadow: 0 0 10px rgba(0,0,0,0.45);
 }
 
@@ -2345,6 +2360,17 @@ footer .donate-link:hover {
 	list-style: none;
 	margin: 12px 0 0 0;
 	padding: 0 0 0 12px;
+	position: relative;
+}
+
+.timeline::before {
+	content: "";
+	position: absolute;
+	left: 12px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: #aa0000;
 }
 
 .timeline li {
@@ -2362,7 +2388,7 @@ footer .donate-link:hover {
 	top: 16px;
 	width: 10px;
 	height: 10px;
-	background: #660000;
+	background: #aa0000;
 	border-radius: 50%;
 }
 
@@ -2430,4 +2456,109 @@ footer .donate-link:hover {
 	padding: 8px 12px;
 	border-left: 1px solid #660000;
 	background: rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   GameShark code display
+   ========================= */
+
+.gameshark-block {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 10px 0 16px;
+	padding: 10px 14px;
+
+	background: #140000;
+	border: 1px solid #660000;
+	box-shadow: inset 0 0 6px #000;
+}
+
+.gameshark-label {
+	font-family: var(--font-ui);
+	font-size: 0.9rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #fff0b3;
+
+	border-right: 1px solid #660000;
+	padding-right: 12px;
+}
+
+.gameshark-code {
+	font-family: "JetBrains Mono", "Courier New", monospace;
+	font-size: 1.05rem;
+	letter-spacing: 0.14em;
+	color: #b3d9ff;
+	background: none;
+}
+
+.gameshark-list code {
+	display: block;
+	margin-bottom: 4px;
+}
+
+/* =========================
+   map display
+   ========================= */
+
+.map-panel {
+	margin: 18px 0;
+	padding: 12px;
+	text-align: center;
+}
+
+.map-panel img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	border: 1px solid #660000;
+	box-shadow: 0 0 10px #000;
+}
+
+.map-panel a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.tip-label {
+	font-family: var(--font-ui);
+	font-weight: 700;
+	color: #fff;
+	background: #660000;
+	border: 1px solid #aa0000;
+	padding: 2px 6px;
+	margin-right: 6px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	box-shadow: 0 0 6px #000;
+}
+
+.trivia {
+	list-style: none;
+	margin: 12px 0 0 0;
+	padding: 0 0 0 12px;
+}
+
+.trivia li {
+	display: grid;
+	gap: 12px;
+	padding: 10px 0 10px 16px;
+	position: relative;
+}
+
+.trivia li::before {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: 16px;
+	width: 10px;
+	height: 10px;
+	background: #aa0000;
+	border-radius: 50%;
+}
+
+.trivia-fact {
+	color: #e0e0e0;
+	line-height: 1.4;
 }
