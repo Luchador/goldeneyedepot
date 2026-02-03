@@ -2295,6 +2295,32 @@ footer .donate-link:hover {
 	color: #44ff88;
 }
 
+.advert__pages {
+	max-width: 1200px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.advert__page {
+	margin: 2.5rem 0;
+	background: #330000;
+	padding: 14px;
+	border-radius: 10px;
+	box-shadow:
+		0 10px 30px rgba(0,0,0,0.5),
+		inset 0 0 0 1px rgba(255,255,255,0.06);
+	align-items: center;
+}
+
+.advert__pages img {
+	max-width: 1200px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+}
+
 /* --- Manual Reader (Vertical) --- */
 
 .manual__header {
