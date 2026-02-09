@@ -182,11 +182,6 @@ a.ge-link:visited::after {
 	margin: 0 auto;
 }
 
-.image-red-border {
-	border: 1px solid #660000;
-	margin-bottom: 4px;
-}
-
 .image-mt-12 {
 	margin-top: 12px;
 }
@@ -1071,6 +1066,7 @@ main a:visited {
 	max-width: 100%;
 	height: auto;
 	border: 1px solid #660000;
+	margin: 12px 0;
 }
 
 .info-media a:hover img {
