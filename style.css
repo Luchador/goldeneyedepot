@@ -1054,7 +1054,6 @@ main a:visited {
 	grid-template-columns: minmax(260px, 550px) 1fr;
 	gap: 16px;
 	align-items: start;
-	padding-bottom: 12px;
 }
 
 .info-media {
@@ -1066,7 +1065,6 @@ main a:visited {
 	max-width: 100%;
 	height: auto;
 	border: 1px solid #660000;
-	margin: 12px 0;
 }
 
 .info-media a:hover img {
@@ -1074,7 +1072,6 @@ main a:visited {
 }
 
 .info-text p {
-	margin-top: 0;
 	font-size: 1.0em;
 }
 
@@ -2039,6 +2036,10 @@ footer .donate-link:hover {
 
 	border: 1px solid #660000;
 	box-shadow: 0 0 10px rgba(0,0,0,0.45);
+}
+
+hero-panel__img a:hover img{
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
 }
 
 .hero-panel a:hover img {
