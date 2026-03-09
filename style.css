@@ -664,6 +664,7 @@ main a:visited {
    
 .info-description {
 	margin-top: 18px;
+	margin-bottom: 16px;
 	padding: 14px 14px;
 }
 
@@ -911,6 +912,58 @@ main a:visited {
 	color: #aaa;
 	font-family: var(--font-heading);
 	text-align: center;
+}
+
+/* =========================
+   Prerelease Layout
+   ========================= */
+
+.pr-gallery {
+	margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+	column-gap: 12px;
+    row-gap: 24px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.image-stack {
+    display: grid;
+}
+
+.image-stack img {
+    grid-area: 1 / 1;
+    width: 360px;
+    height: auto;
+    border: 1px solid #660000;
+}
+
+.comparison-image {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.image-stack:hover .comparison-image {
+    opacity: 1;
+}
+
+.gallery-caption {
+    font-size: 12px;
+    margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.gallery-caption a {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.gallery-caption a:hover {
+    text-decoration: underline;
 }
 
 /* =========================
