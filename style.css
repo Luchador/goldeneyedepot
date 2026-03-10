@@ -10,6 +10,7 @@ html, body {
 	--font-heading: "Courier New", Courier, monospace;
 	--font-ui: "Orbitron", Arial, Helvetica, sans-serif;
 	--font-body: "Courier New", Courier, monospace;
+	--font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	--turntable-size: 192px;
 	--turntable-center-width: 384px;
 	--turntable-pad-x: 0px;
@@ -82,6 +83,11 @@ a {
 }
 
 .bold-text {
+	font-weight: 800;
+}
+
+.bold-code {
+	font-family: var(--font-code);
 	font-weight: 800;
 }
 
@@ -722,6 +728,14 @@ main a:visited {
 	flex-wrap: wrap;
 	gap: 12px;
 	justify-content: center;
+}
+
+.image-pair img {
+	border: 1px solid #660000;
+}
+	
+.image-pair a:hover img {
+	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
 }
 
 /* =========================
