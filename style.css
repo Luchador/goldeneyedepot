@@ -700,6 +700,10 @@ main a:visited {
 	border-bottom: 1px solid #660000;
 }
 
+.info-description h3.padded {
+	padding-top: 12px;
+}
+
 .info-description h2::before,
 .info-description h3::before,
 .image-gallery h3::before {
@@ -719,19 +723,18 @@ main a:visited {
 
 .info-description .image-pair {
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 16px 0px;
-}
-
-.info-description .image-pair {
 	flex-wrap: wrap;
-	gap: 6px;
 	justify-content: center;
+	align-items: center;
+	margin: 16px 0;
+	gap: 12px;
+	align-items: flex-start;
 }
 
 .image-pair img {
 	border: 1px solid #660000;
+	max-width: 100%;
+	height: auto;
 }
 	
 .image-pair a:hover img {
@@ -743,6 +746,15 @@ main a:visited {
 	flex-direction: column;
 	align-items: center;
 	margin: 0;
+	flex: 0 0 auto;
+	min-width: 0;
+	text-align: center;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.image-pair figcaption a {
+	word-break: break-word;
 }
 
 /* =========================
