@@ -46,10 +46,204 @@
 	
 		<h1 class="page-title page-title--extra-margin">Versions</h1>
 		
-		<p>
-		This page will cover the different regional releases of GoldenEye.
-		</p>
+		<h2 class="main-subtitle main-subtitle--short">Overview</h2>
+		
+		<section class="info-description panel">	
+			<p>
+			This page is under construction.
+			</p>
+			<p>
+			<span class="gold-text"><em>GoldenEye 007</em></span> has three versions for the three major console regions of the time: NTSC-U (North America and much of Latin America), PAL (Europe and most of the rest of the world), and NTSC-J (Japan). 
+			The versions are largely similar, but were compiled weeks apart and do have some differences. According to the <a href="https://github.com/n64decomp/007/blob/master/src/game/compiletime.c" target="_blank" rel="noopener">game's decompiled code</a>, these are the compile dates for the three versions:
+			</p>
+			<ul class="trivia">
+				<li>
+				NTSC-U — Jun 29 1997 20:46:05
+				</li>
+				<li>
+				NTSC-J — Jul 10 1997 14:53:37
+				</li>
+				<li>
+				PAL — Jul 31 1997 14:53:03
+				</li>
+			</ul>
+			<br>
+			<p>
+				The biggest difference between versions is the frame rate. The two NTSC versions run at <span class="yellow-text">29.97 frames per second</span> (<a href="https://sites.google.com/site/consoleprotocols/home/homebrew/n64-assembly-home/Lesson05" target="_blank" rel="noopener">Source</a>) while PAL runs at <span class="yellow-text">25 frames per second</span>. This means the NTSC versions 
+				<em>can</em> run at a higher frame rate, but in practice sometimes fail to reach it. Players describe the PAL version as having a more stable frame rate. The slower PAL frame rate gives the Nintendo 64 more time to complete its calculations each frame, and thus slowdowns are a little less common.
+			</p>
+			
+			<p>
+				The game itself was only released in two languages: English and Japanese. Sometimes the packaging and instruction booklet were translated into other languages, such as <a href="/manuals/manual-scandinavia.html" class="ge-link">this one</a> in Danish, Swedish, and Finnish.
+			</p>
+			
+			<p>
+				Unlike some other Nintendo 64 games such as <em>Perfect Dark</em>, <em>GoldenEye</em> never had a revision to fix bugs or add features.
+			</p>
+			
+			<p>
+				Below is a map of the approximate <em>GoldenEye</em> regions. I say approximate because some countries such as South Korea and the Philippines did not have a dedicated release and had to import their cartridges. NTSC-U and NTSC-J Nintendo 64 consoles are actually compatible. The only region lockout
+				comes from the physical shape of the tabs on the back of the cartridges. <a href="https://youtu.be/wDLQSnQfZrg?si=m0pGbgS0bNbZW8i_&t=264" target="_blank" rel="noopener">This great video</a> from <em>GoldenEye</em> speedrunner MadmanFlechr teaches how to modify a NTSC-J cartridge to play on a NTSC-U console and vice versa.
+			</p>
+			
+			<div class="hero-panel">
+				<img src="/images/Approximate_GoldenEye_Regions.png" alt="Analog TV regions" class="hero-panel__img" loading="lazy" decoding="async"/>
+			</div>
+		</section>
+		
+		<div class="section-sep" aria-hidden="true"></div>
+		
+		<h2 class="main-subtitle main-subtitle--short">Release Timeline</h2>
+		
+		<ul class="timeline panel">
+			<li class="timeline-release">
+				<span class="timeline-date">Aug 23, 1997</span>
+				<span class="timeline-event">
+					<span class="gold-text"><em>GoldenEye 007</em></span> NTSC-J release.
+				</span>
+			</li>
 
+			<li class="timeline-release">
+				<span class="timeline-date">Aug 25, 1997</span>
+				<span class="timeline-event">
+					<span class="gold-text"><em>GoldenEye 007</em></span> NTSC-U release.
+				</span>
+			</li>
+
+			<li class="timeline-release">
+				<span class="timeline-date">Nov 7, 1997</span>
+				<span class="timeline-event">
+					<span class="gold-text"><em>GoldenEye 007</em></span> PAL release.
+				</span>
+			</li>
+		</ul>
+		
+		<div class="section-sep" aria-hidden="true"></div>
+		
+		<h2 class="main-subtitle main-subtitle--short">NTSC-U and PAL Differences</h2>
+
+		<section class="info-description panel">
+			<h3>Spellings</h3>
+			<p>
+			American English spellings are changed to British English in the PAL release. This is a non-exhaustive list of spelling changes:
+			</p>
+				<ul class="trivia">
+					<li>
+						armor → armour
+					</li>
+					<li>
+						rumored → rumoured
+					</li>
+					<li>
+						minimize → minimise
+					</li>
+					<li>
+						neutralize → neutralise
+					</li>
+					<li>
+						defense → defence
+					</li>
+					<li>
+						center → centre
+					</li>
+				</ul>
+			</br>
+			<h3>Briefings</h3>
+			<p>
+			Some briefings were reworded for the PAL version:
+			</p>
+			<table class="briefing-table">
+				<thead>
+					<tr>
+						<th colspan="2" class="briefing-title">Facility — Q Branch</th>
+					</tr>
+					<tr>
+						<th>NTSC-U</th>
+						<th>PAL</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+						Now listen carefully, Bond. Those bombs will be armed as soon as the last one is set. Don't be too close when you set them off or you'll go up in flames as well, 
+						and while you're at it, please try and bring back that door-opener undamaged for once. 
+						<span class="red-text">Too much rough handling like the last mission and it might go wrong at a bad time.</span> Honestly 007, sometimes I think you damage your equipment on purpose.
+						</td>
+
+						<td>
+						Now listen <span class="yellow-text">here, Bond. Be sure to place the mines carefully, otherwise you won't take out all the tanks in the bottling room.</span> Don't be too close when you set them off or you'll go up in flames as well, and while you're at it,
+						please try and bring back that door-opener undamaged for once. Honestly 007, sometimes I think you damage your equipment on purpose.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+			The NTSC-U line about the bombs being armed when the last one is set isn't accurate. Remote Mines are armed as soon as you throw them. The PAL line was changed to be more accurate and helpful. The line about rough handling had to be dropped to make the text fit.
+			</p>
+			<table class="briefing-table">
+				<thead>
+					<tr>
+						<th colspan="2" class="briefing-title">Frigate — Background</th>
+					</tr>
+					<tr>
+						<th>NTSC-U</th>
+						<th>PAL</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+						A demonstration of the Pirate stealth helicopter by the French military has been unexpectedly postponed.
+						Official channels insist that nothing is wrong but unofficially MI6 has been asked to help salvage a very tricky hostage situation on board the frigate La Fayette. 
+						It seems that the Janus crime syndicate will stop at nothing in its attempt to hijack the helicopter.
+						</td>
+
+						<td>
+						A demonstration of the Pirate stealth helicopter by the French military has been unexpectedly postponed.
+						Official channels insist that nothing is wrong but unofficially MI6 has been asked to help salvage a very tricky hostage situation on board the frigate La Fayette. 
+						It seems that <span class="yellow-text">a crime syndicate called 'Janus' </span> will stop at nothing in its attempt to hijack the helicopter.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+			The PAL change makes sense here since the player is not introduced to the Janus Crime Syndicate prior to this.
+			</p>
+			<table class="briefing-table">
+				<thead>
+					<tr>
+						<th colspan="2" class="briefing-title">Frigate — Q Branch</th>
+					</tr>
+					<tr>
+						<th>NTSC-U</th>
+						<th>PAL</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>
+						The French have kindly given us technical details of the Pirate so I've managed to convert this tracker bug into quite a clever little chap. 
+						It's undetectable and it locks out all weapon firing commands. Janus is also threatening to blow up the ship. 
+						They are most likely to have placed explosives on the bridge and in the engine room. Take care, 007, and be certain to use the bomb defuser correctly.
+						</td>
+
+						<td>
+						The French have kindly given us technical details of the Pirate so I've managed to convert this tracker bug into quite a clever little chap. 
+						It's undetectable and <span class="yellow-text">will lock out weapon firing</span>. Janus is also threatening to blow up the ship. 
+						They are most likely to have placed explosives on the bridge and in the engine room. Take care, 007, and be certain to use the bomb defuser correctly.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+			Very small change in wording here. I think I like the NTSC-U version better, actually.
+			</p>
+		</section>
+		
+		<div class="section-sep" aria-hidden="true"></div>
 	</main>
 
 	<footer>
