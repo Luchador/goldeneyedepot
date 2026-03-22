@@ -2745,3 +2745,29 @@ hero-panel__img a:hover img{
 	line-height: 1.3;
 	margin: 0;
 }
+
+.texture figure {
+	display: inline-block;
+	text-align: left;
+	margin: 0;
+}
+
+.texture img {
+	display: block;
+	margin: 0;
+	width: 256px;
+	height: 256px;
+	image-rendering: pixelated;
+}
+
+.texture img.scale-2xh 
+{ 
+	width: 512px; 
+	height: 256px;
+}
+
+.texture figcaption {
+	margin-top: 6px;
+	font-size: 0.9em;
+	padding-bottom: 12px;
+}
