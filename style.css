@@ -984,6 +984,11 @@ main a:visited {
     opacity: 1;
 }
 
+.image-stack--full img {
+    width: 100%;
+    height: auto;
+}
+
 .gallery-caption {
     font-size: 12px;
     margin-top: 4px;
