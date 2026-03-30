@@ -763,11 +763,11 @@ main a:visited {
    
 .image-gallery {
 	margin-top: 18px;
-	padding: 5px;
+	padding: 8px;
 }
 
 .image-gallery p {
-	padding: 0 12px;
+	padding: 0;
 }
 
 .image-gallery .gallery-grid {
