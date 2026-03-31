@@ -828,6 +828,15 @@ main a:visited {
     width: 100%;
 }
 
+.image-gallery .gallery-separator--padded {
+	grid-column: 1 / -1;
+	border: 0;
+	border-top: 1px solid #660000;
+	height: 0;
+	width: 100%;
+	margin: 12px 0;
+}
+
 /* =========================
    Outfit Gallery
    ========================= */
@@ -2751,4 +2760,15 @@ hero-panel-img a:hover img{
 	margin-top: 6px;
 	font-size: 0.9em;
 	padding-bottom: 12px;
+}
+
+.video-center {
+	text-align: center;
+}
+
+.video-center video {
+	display: inline-block;
+	width: 720px;
+	max-width: 100%;
+	height: auto;
 }
