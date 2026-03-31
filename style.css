@@ -1147,8 +1147,13 @@ main a:visited {
 	border: 1px solid #660000;
 	border-bottom: 2px solid #660000;
 	background-color: #000;
-	margin-bottom: 4px;
+	margin-bottom: 12px;
 }
+
+.video-display--extramargin {
+	margin-bottom: 28px;
+}
+
 
 /* =========================
    Stats Panel
