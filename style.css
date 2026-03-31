@@ -776,6 +776,7 @@ main a:visited {
 	column-gap: 10px;
 	row-gap: 32px;
 	align-items: start;
+	padding-bottom: 12px;
 }
 
 .image-gallery .gallery-grid h3 {
@@ -1138,33 +1139,6 @@ main a:visited {
 	border-bottom: 2px solid #660000;
 	background-color: #000;
 	margin-bottom: 4px;
-}
-
-.info-layout {
-	display: grid;
-	grid-template-columns: minmax(260px, 550px) 1fr;
-	gap: 16px;
-	align-items: start;
-	margin-bottom: 16px;
-}
-
-.info-media {
-	max-width: 550px;
-}
-
-.info-media img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	border: 1px solid #660000;
-}
-
-.info-media a:hover img {
-	box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-}
-
-.info-text p {
-	font-size: 1.0em;
 }
 
 /* =========================
@@ -2688,8 +2662,7 @@ hero-panel-img a:hover img{
 
 .trivia {
 	list-style: none;
-	margin: 12px 0 0 0;
-	padding: 0 0 0 12px;
+	padding: 12px 30px 12px 12px;
 }
 
 .trivia li {
