@@ -249,6 +249,98 @@
 		</section>
 		
 		<div class="section-sep" aria-hidden="true"></div>
+		
+		<h2 class="main-subtitle main-subtitle--short">PAL and NTSC-J Shared Differences with NTSC-U</h2>
+		
+		<section class="info-description panel">
+		
+			<p>
+				This section is for changes made after the final NTSC-U compile. That means the PAL and NTSC-J got these changes, but not the NTSC-U version.
+			</p>
+			
+			<h3>Rumble Pak Fix</h3>
+			
+			<p>
+				On NTSC-U if you remove the Rumble Pak while the Pause Menu is open then reinsert it, it will no longer function. The only way to get it working again is to reset the console. PAL and NTSC-J fix this bug.
+			</p>
+			<p>
+				The code below is from the <a href="https://github.com/kholdfuzion/goldeneye_src" target="_blank" rel="noopener">GoldenEye Decompilation Project</a>. The preprocessor directive <span class="bold-code">BUGFIX_R1</span> applies to the PAL and NTSC-J versions of <em>GoldenEye</em>. The following code is found
+				in the file <span class="bold-code">joy.c</span>.
+			</p>
+			
+			<figure class="c-code-figure">
+				<pre class="c-code-block"><code>
+void joyRumblePakTick(void)
+{
+	s32 i;
+
+	for (i = 0; i &lt; MAXCONTROLLERS; i++)
+	{
+		if (g_ContRumblePakCurrentState[i] != g_ContRumblePakTargetState[i])
+		{
+			if (g_ContRumblePakTargetState[i] == RUMBLEPAKSTATE_ON)
+			{
+				if (0 == osMotorStart(&amp;g_ContPfs[i]))
+				{
+					g_ContRumblePakCurrentState[i] = RUMBLEPAKSTATE_ON;
+				}
+				else
+				{
+					set_rumble_pak_init_state_not_ready(i);
+				}
+<span class="c-code-highlight">#ifdef BUGFIX_R1
+			}
+			else if (g_ContRumblePakTargetState[i] == RUMBLEPAKSTATE_UNKNOWN)
+			{
+				if (osMotorInit(&amp;g_ContInputMessageQueue, &amp;g_ContPfs[i], i) != 0)
+				{
+					set_rumble_pak_init_state_not_ready(i);
+				}
+
+				osMotorStop(&amp;g_ContPfs[i]);
+				g_ContRumblePakCurrentState[i] = RUMBLEPAKSTATE_OFF;
+				g_ContRumblePakTargetState[i] = RUMBLEPAKSTATE_OFF;
+#endif</span>
+			}
+			else
+			{
+				if (0 == osMotorStop(&amp;g_ContPfs[i]))
+				{
+					g_ContRumblePakCurrentState[i] = RUMBLEPAKSTATE_OFF;
+				}
+				else
+				{
+					set_rumble_pak_init_state_not_ready(i);
+				}
+			}
+		}
+
+		if (g_ContRumblePakTimer60[i] &lt;= 0)
+		{
+			g_ContRumblePakTimer60[i] = 0;
+		}
+		else
+		{
+			g_ContRumblePakTimer60[i]--;
+
+			if (g_ContRumblePakTimer60[i] &lt;= 0)
+			{
+				g_ContRumblePakTimer60[i] = 0;
+				g_ContRumblePakTargetState[i] = 0;
+			}
+		}
+	}
+}
+				</code></pre>
+			</figure>
+			
+			<p>
+				The fix adds code to handle the condition when the Rumble Pak's state is unknown, a case which was not addressed in the original code.
+			</p>
+			
+		</section>
+		
+		<div class="section-sep" aria-hidden="true"></div>
 	</main>
 
 	<footer>
