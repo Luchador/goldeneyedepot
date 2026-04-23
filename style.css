@@ -2714,9 +2714,18 @@ hero-panel-img a:hover img{
     color: #ffff00;
 }
 
+.figcap-12px {
+	font-size: 12px;
+}
+
 .img-grid {
+	font-size: 1.0em;
 	margin: 18px 0;
 	text-align: center;
+}
+
+.img-grid figcaption{
+	font-size: 12px;
 }
 
 .img-grid__grid {
