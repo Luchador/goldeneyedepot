@@ -258,6 +258,8 @@
 				This section is for changes made after the final NTSC-U compile. That means the PAL and NTSC-J got these changes, but not the NTSC-U version.
 			</p>
 			
+			<div class="spacer-redline"></div>
+			
 			<h3>Rumble Pak Fix</h3>
 			
 			<p>
@@ -338,6 +340,100 @@ void joyRumblePakTick(void)
 				The fix adds code to handle the condition when the Rumble Pak's state is unknown, a case which was not addressed in the original code.
 			</p>
 			
+			<div class="spacer-redline"></div>
+			
+			<h3>2x Weapons in Pause Menu Fix</h3>
+			
+			<p>
+				On NTSC-U there is a bug where if any of the 2x weapon cheats are selected those weapons will not show up in the Pause Menu.
+			</p>
+			<p>
+				The preprocessor directive <span class="bold-code">BUGFIX_R1</span> shows this bug was fixed for PAL and NTSC-J by calling the bondinvAddInvItem function in the code for each 2x weapon cheat.
+			</p>
+			
+			<figure class="c-code-figure">
+				<pre class="c-code-block"><code>
+        case CHEAT_2X_ROCKET_LAUNCHER:
+            if (player_count == 1)
+            {
+<span class="c-code-highlight">#if defined(BUGFIX_R1)
+                bondinvAddInvItem(ITEM_ROCKETLAUNCH);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_ROCKETLAUNCH, ITEM_ROCKETLAUNCH);
+                give_cur_player_ammo(AMMO_ROCKETS, get_max_ammo_for_type(AMMO_ROCKETS));
+                return;
+            }
+            return;
+
+        case CHEAT_2X_GRENADE_LAUNCHER:
+            if (player_count == 1)
+            {
+<span class="c-code-highlight">#if defined(BUGFIX_R1)
+                bondinvAddInvItem(ITEM_GRENADELAUNCH);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_GRENADELAUNCH, ITEM_GRENADELAUNCH);
+                give_cur_player_ammo(AMMO_GRENADEROUND, get_max_ammo_for_type(AMMO_GRENADEROUND));
+                return;
+            }
+            return;
+
+        case CHEAT_2X_RCP90:
+            if (player_count == 1)
+            {
+<span class="c-code-highlight">#if defined(BUGFIX_R1)
+                bondinvAddInvItem(ITEM_FNP90);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_FNP90, ITEM_FNP90);
+                give_cur_player_ammo(AMMO_9MM, get_max_ammo_for_type(AMMO_9MM));
+                return;
+            }
+            return;
+
+        case CHEAT_2X_THROWING_KNIFE:
+            if (player_count == 1)
+            {
+<span class="c-code-highlight">#if defined(BUGFIX_R1)
+                bondinvAddInvItem(ITEM_THROWKNIFE);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_THROWKNIFE, ITEM_THROWKNIFE);
+                give_cur_player_ammo(AMMO_KNIFE, get_max_ammo_for_type(AMMO_KNIFE));
+                return;
+            }
+            return;
+
+        case CHEAT_2X_HUNTING_KNIFE:
+            if (player_count == 1)
+            {
+#if defined(BUGFIX_R1)
+                if (j_text_trigger)
+                {
+                    bondinvAddInvItem(ITEM_ROCKETLAUNCH);
+                    bondinvAddInvItem(ITEM_SNIPERRIFLE);
+                    bondinvAddDoublesInvItem(ITEM_SNIPERRIFLE, ITEM_ROCKETLAUNCH);
+                    give_cur_player_ammo(AMMO_ROCKETS, get_max_ammo_for_type(AMMO_ROCKETS));
+                    give_cur_player_ammo(ITEM_THROWKNIFE, get_max_ammo_for_type(ITEM_THROWKNIFE));
+                    return;
+                }
+<span class="c-code-highlight">
+                bondinvAddInvItem(ITEM_KNIFE);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_KNIFE, ITEM_KNIFE);
+                return;
+            }
+            return;
+
+        case CHEAT_2X_LASER:
+            if (player_count == 1)
+            {
+<span class="c-code-highlight">#if defined(BUGFIX_R1)
+                bondinvAddInvItem(ITEM_LASER);
+#endif</span>
+                bondinvAddDoublesInvItem(ITEM_LASER, ITEM_LASER);
+                return;
+            }
+            return;
+				</code></pre>
+			</figure>
 		</section>
 		
 		<div class="section-sep" aria-hidden="true"></div>

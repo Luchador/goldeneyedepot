@@ -2819,3 +2819,22 @@ hero-panel-img a:hover img{
 	background: rgba(140, 0, 0, 0.18);
 	outline: 1px solid rgba(255, 80, 80, 0.25);
 }
+
+.spacer {
+    display: block;
+    height: 2rem;
+}
+
+.spacer-small {
+    height: 1rem;
+}
+
+.spacer-large {
+    height: 3rem;
+}
+
+.spacer-redline {
+    height: 2rem;
+    margin: 1.5rem 0;
+    border-top: 1px solid rgba(255, 0, 0, 0.45);
+}
