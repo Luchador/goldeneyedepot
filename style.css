@@ -2770,6 +2770,12 @@ hero-panel-img a:hover img{
 	height: 256px;
 }
 
+.texture img.scale-2yh 
+{ 
+	width: 256px; 
+	height: 512px;
+}
+
 .texture figcaption {
 	margin-top: 6px;
 	font-size: 0.9em;
