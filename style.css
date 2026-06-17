@@ -192,6 +192,11 @@ a.ge-link:visited::after {
 	margin-top: 12px;
 }
 
+li
+{
+    color: #eee;
+}
+
 figcaption {
 	font-size: 0.8rem;
 	color: #aaa;

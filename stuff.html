@@ -373,7 +373,60 @@
 			</div>
 		</section>
 		
-		<div class="section-sep" aria-hidden="true"></div>
+		<section class="image-gallery panel">
+			<h3>16. Extended Melee Range</h3>
+			<div class="gallery-grid">
+				<figure>
+					<video class="video-display" controls preload="metadata">
+						<source src="videos/melee-test.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</figure>
+				<figure>
+					<p>
+						When you pick up the <a href="/weapons.html#sniper" class="ge-link">Sniper Rifle</a> your regular bare handed <a href="/weapons.html#unarmed" class="ge-link">Unarmed</a> attack is replaced with the butt of the Sniper Rifle. For almost 30 years I thought this was a purely cosmetic change. That changed in 2026 when
+						the code for this was decompiled. It turns out the Sniper Rifle actually has twice the melee range of the standard Slapper attack! Without the Sniper Rifle the melee range is 50 centimeters and with it the range is one meter.
+					</p>
+				</figure>
+				<figure>
+					<img src="/images/stuff/sniper-code.png" width="395" height="153" loading="lazy" decoding="async">
+					<figcaption>Code from file chr.c.</figcaption>
+				</figure>
+			</div>
+		</section>
+		
+		<section class="image-gallery panel">
+			<h3>17. Character Roster Weapons</h3>
+			<div class="gallery-grid">
+				<figure>
+					<img src="/images/stuff/boris-cmag.jpg" width="540" height="405" loading="lazy" decoding="async">
+				</figure>
+				<figure>
+					<p>
+						This is another new discovery from the decompilation. During the character showcase that happens during the intro and the credits, characters are assigned to wield weapons at random. However,
+						there are conditions:
+					</p>
+					<p>
+						<ul>
+							<li>Characters cannot have the <a href="/weapons.html#cmag" class="ge-link">Cougar Magnum</a> unless Cradle has been beaten on any difficulty on at least one save file.</li>
+						</ul>
+						<ul>
+							<li>Characters cannot have the <a href="/weapons.html#laser" class="ge-link">Laser</a> unless Aztec has been beaten on <span class="difficulty sa">Secret Agent</span> or
+							<span class="difficulty ooa">00 Agent</span> on at least one save file.</li>
+						</ul>
+						<ul>
+							<li>Characters cannot have the <a href="/weapons.html#gg" class="ge-link">Golden Gun</a> unless Egyptian has been beaten on <span class="difficulty ooa">00 Agent</span> on at least one save file.</li>
+						</ul>
+					</p>
+				</figure>
+				<figure>
+					<img src="/images/stuff/weapon-roster-code.png" width="816" height="519" loading="lazy" decoding="async">
+					<figcaption>Code from file front.c.</figcaption>
+				</figure>
+			</div>
+			<div class="section-sep" aria-hidden="true"></div>
+		</section>
+		
 	</main>
 
 	<footer>
