@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div class="site-frame">
-	<header class="site-banner">
+	<header class="site-banner" id="top">
 	  <img class="banner-bg" src="/images/banner.jpg" alt="GoldenEye Depot banner">
 	  <img class="banner-logo" src="/images/logo.png" alt="The GoldenEye Depot">
 	</header>
@@ -106,6 +106,143 @@
 		</section>
 		
 		<div class="section-sep" aria-hidden="true"></div>
+		
+		<h2 class="main-subtitle" id="autoaim">Auto-Aim</h2>
+		
+		<section class="info-description panel" aria-label="weapon sets description">
+			<h3>Overview</h3>
+			<p>
+				Auto-Aim is a setting found in the pause menu and multiplayer settings that causes the player's gun to automatically target enemies near the center of the screen. It is enabled by default in both single player and multiplayer. 
+				Auto-Aim targets only characters not drone guns, CCTV cameras, etc... 
+			</p>
+			<h3>Specifics</h3>
+			<p>
+				Auto-Aim's ability to target enemies varies by both region and difficulty. On the Japanese version it is more lenient on <span class="difficulty sa">Secret Agent</span> and <span class="difficulty ooa">00 Agent</span>. It is also interesting that Auto-Aim in <span class="difficulty oo7">007 Mode</span>
+				doesn't take on the stats from any other difficulty, and falls between <span class="difficulty agent">Agent</span> and <span class="difficulty sa">Secret Agent</span> for US and PAL.
+			</p>
+			<div class="autoaim-table-panel">
+				<table class="autoaim-table">
+					<caption>Auto-Aim Leniency</caption>
+
+					<thead>
+						<tr>
+							<th scope="col">Difficulty</th>
+							<th scope="col">US</th>
+							<th scope="col">PAL</th>
+							<th scope="col">JP</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<th scope="row">
+								<span class="difficulty agent">Agent</span>
+							</th>
+							<td>1.5</td>
+							<td>1.5</td>
+							<td>1.5</td>
+						</tr>
+
+						<tr>
+							<th scope="row">
+								<span class="difficulty sa">Secret Agent</span>
+							</th>
+							<td>0.75</td>
+							<td>0.75</td>
+							<td>1.1</td>
+						</tr>
+
+						<tr>
+							<th scope="row">
+								<span class="difficulty ooa">00 Agent</span>
+							</th>
+							<td>0.2</td>
+							<td>0.2</td>
+							<td>0.75</td>
+						</tr>
+
+						<tr>
+							<th scope="row">
+								<span class="difficulty oo7">007 Mode</span>
+							</th>
+							<td>1.0</td>
+							<td>1.0</td>
+							<td>1.0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h3>Exceptions</h3>
+			<p>Auto-Aim does not engage with the following characters:</p>
+			<ul class="info-list">
+				<li>Characters not holding weapons or objects</li>
+				<li>Characters scripted to have Auto-Aim disabled. This includes the following levels and characters:
+					<ul>
+						<li>Facility:</li>
+							<ul>
+								<li>006/Trevelyan</li>
+								<li>Dr. Doak</li>
+								<li>General Ourumov</li>
+							</ul>
+						<li>Silo:</li>
+							<ul>
+								<li>General Ourumov</li>
+							</ul>
+						<li>Statue:</li>
+							<ul>
+								<li>Valentin Zukovsky (Redundant since he's unarmed)</li>
+								<li>Trevelyan (Redundant since he's unarmed)</li>
+								<li>Natalya (Redundant since she's unarmed)</li>
+								<li>Dmitri Mishkin</li>
+							</ul>
+						<li>Streets:</li>
+							<ul>
+								<li>Valentin Zukovsky (Redundant since he's unarmed)</li>
+							</ul>
+						<li>Train:</li>
+							<ul>
+								<li>Trevelyan</li>
+								<li>Xenia</li>
+								<li>General Ourumov</li>
+								<li>Natalya (Redundant since she's unarmed)</li>
+							</ul>
+						<li>Jungle:</li>
+							<ul>
+								<li>Xenia</li>
+								<li>Natalya</li>
+							</ul>
+						<li>Control:</li>
+							<ul>
+								<li>Boris</li>
+								<li>Trevelyan</li>
+								<li>Natalya</li>
+							</ul>
+						<li>Caverns:</li>
+							<ul>
+								<li>Trevelyan</li>
+							</ul>
+						<li>Cradle:</li>
+							<ul>
+								<li>Trevelyan</li>
+							</ul>
+						<li>Aztec:</li>
+							<ul>
+								<li>Jaws</li>
+							</ul>
+						<li>Egyptian:</li>
+							<ul>
+								<li>Baron Samedi</li>
+							</ul>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		
+		<div class="section-sep" aria-hidden="true"></div>
+		
+		<div class="back-link-wrap">
+			<a href="/mechanics.html#top" class="back-link">Back to Top</a>
+		</div>
 		
 	</main>
 

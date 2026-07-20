@@ -2850,3 +2850,153 @@ hero-panel-img a:hover img{
     margin: 1.5rem 0;
     border-top: 1px solid rgba(255, 0, 0, 0.45);
 }
+
+/* =========================
+   Game Mechanics Data Table
+   ========================= */
+
+.autoaim-table-panel {
+	width: min(760px, 100%);
+	margin: 24px auto;
+	padding: 14px;
+	box-sizing: border-box;
+	overflow-x: auto;
+
+	background-color: #220000;
+	border: 2px solid #660000;
+
+	box-shadow:
+		inset 0 2px 0 rgba(255, 255, 255, 0.10),
+		inset 0 -2px 0 rgba(0, 0, 0, 0.65);
+}
+
+.autoaim-table {
+	width: 100%;
+	min-width: 560px;
+	table-layout: fixed;
+	border-collapse: collapse;
+
+	background-color: #000;
+	border: 1px solid #660000;
+}
+
+.autoaim-table caption {
+	caption-side: top;
+	padding: 0 0 12px;
+
+	font-family: var(--font-ui);
+	font-size: 1.25rem;
+	font-weight: 800;
+	letter-spacing: 0.10em;
+	text-align: center;
+
+	color: #ffcc00;
+
+	text-shadow:
+		2px 2px 0 #5a4300,
+		-1px -1px 0 rgba(255, 226, 138, 0.8);
+}
+
+.autoaim-table th,
+.autoaim-table td {
+	padding: 10px 14px;
+	border: 1px solid #660000;
+	vertical-align: middle;
+}
+
+.autoaim-table thead th {
+	font-family: var(--font-ui);
+	font-size: 0.95rem;
+	letter-spacing: 0.08em;
+	text-align: center;
+	color: #fff;
+
+	background: linear-gradient(
+		180deg,
+		#4a0000 0%,
+		#300000 100%
+	);
+
+	border-bottom: 2px solid #800000;
+}
+
+.autoaim-table thead th:first-child {
+	width: 34%;
+	text-align: left;
+	color: #ffcc00;
+}
+
+.autoaim-table tbody th {
+	font-family: var(--font-ui);
+	font-size: 0.95rem;
+	letter-spacing: 0.03em;
+	text-align: left;
+
+	background-color: #220000;
+	border-right: 2px solid #800000;
+}
+
+.autoaim-table .difficulty {
+	font-weight: 700;
+}
+
+.autoaim-table tbody td {
+	font-family: var(--font-code);
+	font-size: 1rem;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+
+	color: #e0e0e0;
+	background-color: #000;
+}
+
+.autoaim-table tbody tr:nth-child(even) td {
+	background-color: rgba(34, 0, 0, 0.55);
+}
+
+.autoaim-table tbody tr:hover th {
+	background-color: #350000;
+}
+
+.autoaim-table tbody tr:hover td {
+	background-color: rgba(255, 0, 0, 0.12);
+}
+
+@media (max-width: 700px) {
+	.autoaim-table-panel {
+		padding: 10px;
+	}
+
+	.autoaim-table th,
+	.autoaim-table td {
+		padding: 8px 10px;
+	}
+}
+
+.info-list {
+	margin: 12px 0;
+	padding-left: 24px;
+	list-style-type: disc;
+}
+
+.info-list > li::marker {
+	color: #aa0000;
+	font-size: 1.25em;
+}
+
+/* Sub-list */
+.info-list ul {
+	margin-top: 8px;
+	padding-left: 28px;
+	list-style-type: "◆  ";
+}
+
+.info-list ul li {
+	margin-bottom: 6px;
+	color: #eee;
+}
+
+.info-list ul li::marker {
+	color: #aa0000;
+	font-size: 0.75em;
+}
