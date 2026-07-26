@@ -10,6 +10,16 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+	
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+			"three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+		}
+	}
+	</script>
+	<script type="module" src="/ge-model-viewer.js"></script>
 </head>
 <body>
 	<div class="site-frame">
@@ -48,10 +58,12 @@
 			<div class="gallery-grid">
 				<figure>
 					<p>
-						Citadel is a test level that exists on every <span class="gold-text"><em>Goldeneye 007</em></span> cartridge.
+						Citadel is a test level that exists on every <span class="gold-text"><em>Goldeneye 007</em></span> cartridge. It was never intended to be seen by players and thus it cannot be accessed without hacking or modding the game. Citadel uses an outdated collision format
+						so even if the level is accessed on a vanilla cartridge there is no way to properly walk around it. <em>GoldenEye</em> hackers have worked hard to make the level playable and that will be discussed further down the page.
 					</p>
 					<p>
-						<span class="red-text">TODO: expand this page.</span>
+						Citadel has three floors. The main floor consists of four arenas connected by hallways. The basement is one large arena with catwalks. Four ramps connect the main floor to the top floor which is just a small room. The level was clearly made very quickly — texture coordinates are often
+						warped and/or stretched in ways you would not see in a finished level. Some faces do not even have textures at all.
 					</p>
 				</figure>
 				<figure>
@@ -63,6 +75,16 @@
 			</div>
 		</section>
 		
+		<div class="section-sep" aria-hidden="true"></div>
+		
+		<h2 class="main-subtitle">Level Viewer</h2>
+		
+		<div class="ge-viewer"
+			data-ge-model="/models/citadel.glb"
+			data-title="Citadel"
+			data-poster="/images/pr/citadel/citadel01.png">
+		</div>
+			
 		<div class="section-sep" aria-hidden="true"></div>
 		
 		<h2 class="main-subtitle">History</h2>

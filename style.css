@@ -3000,3 +3000,282 @@ hero-panel-img a:hover img{
 	color: #aa0000;
 	font-size: 0.75em;
 }
+
+/* =========================
+   Model Viewer
+   ========================= */
+
+.ge-viewer {
+	margin: 18px 0;
+	padding: 12px;
+
+	background-color: #220000;
+	border: 6px double #660000;
+
+	box-shadow:
+		inset 0 2px 0 rgba(255, 255, 255, 0.10),
+		inset 0 -2px 0 rgba(0, 0, 0, 0.65);
+}
+
+/* ---- header ---- */
+
+.gev-head {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+
+	margin-bottom: 10px;
+	padding-bottom: 6px;
+	border-bottom: 2px solid rgba(102, 0, 0, 0.9);
+}
+
+.gev-eyebrow {
+	font-family: var(--font-ui);
+	font-size: 0.7rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #ccaaaa;
+
+	padding: 2px 6px;
+	border: 1px solid #660000;
+	background: #140000;
+}
+
+.gev-title {
+	margin: 0;
+	font-family: var(--font-ui);
+	font-size: 1.25rem;
+	letter-spacing: 0.08em;
+	color: #ffcc00;
+
+	text-shadow:
+		2px 2px 0 #5a4300,
+		-1px -1px 0 rgba(255, 226, 138, 0.8);
+}
+
+/* ---- viewport ---- */
+
+.gev-stage {
+	position: relative;
+	aspect-ratio: 4 / 3;
+	width: 100%;
+
+	background-color: #050506;
+	background-image: linear-gradient(
+		180deg,
+		#242428 0%,
+		#131316 55%,
+		#050506 100%
+	);
+
+	border: 1px solid #660000;
+	box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.55);
+
+	overflow: hidden;
+}
+
+.gev-canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	cursor: grab;
+	touch-action: none;
+}
+
+.gev-canvas:active {
+	cursor: grabbing;
+}
+
+.gev-canvas:focus-visible {
+	outline: 1px solid #ff5555;
+	outline-offset: -2px;
+}
+
+.gev-poster {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.gev-status {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	max-width: 80%;
+	padding: 8px 12px;
+
+	font-family: var(--font-ui);
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	text-align: center;
+	color: #e0e0e0;
+
+	background: rgba(0, 0, 0, 0.85);
+	border: 1px solid #660000;
+}
+
+.gev-status--error {
+	color: #ffb3b3;
+	border-color: #aa0000;
+	box-shadow: 0 0 10px rgba(255, 0, 0, 0.35);
+}
+
+/* ---- controls ---- */
+
+.gev-controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+
+	margin-top: 10px;
+}
+
+.gev-btn {
+	font-family: var(--font-ui);
+	font-size: 0.8rem;
+	letter-spacing: 0.06em;
+
+	color: #ffcc00;
+	background-color: #220000;
+	border: 1px solid #660000;
+	padding: 5px 10px;
+
+	cursor: pointer;
+
+	box-shadow:
+		inset 0 2px 0 rgba(255, 255, 255, 0.12),
+		inset 0 -2px 0 rgba(0, 0, 0, 0.7);
+}
+
+.gev-btn:hover:not(:disabled) {
+	color: #ffff00;
+	box-shadow:
+		0 0 10px rgba(255, 0, 0, 0.6),
+		inset 0 2px 0 rgba(255, 255, 255, 0.12),
+		inset 0 -2px 0 rgba(0, 0, 0, 0.7);
+}
+
+.gev-btn:focus-visible {
+	outline: 1px solid #ff5555;
+	outline-offset: 2px;
+}
+
+/* Pressed state matches the active nav tab. */
+.gev-btn.is-on {
+	color: #fff;
+	background-color: #880000;
+	border-top: 2px solid #ff0000;
+	box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.gev-btn:disabled {
+	color: #886655;
+	cursor: default;
+	opacity: 0.6;
+}
+
+/* ---- readout ---- */
+
+.gev-readout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+
+	margin: 10px 0 0 0;
+
+	border: 1px solid #660000;
+	background: #000;
+}
+
+.gev-readout > div {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+
+	flex: 1 1 auto;
+	padding: 6px 12px;
+	border-right: 1px solid rgba(102, 0, 0, 0.7);
+}
+
+.gev-readout > div:last-child {
+	border-right: none;
+}
+
+.gev-readout dt {
+	font-family: var(--font-ui);
+	font-size: 0.7rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #ccaaaa;
+}
+
+.gev-readout dd {
+	margin: 0;
+	font-family: var(--font-code);
+	font-size: 0.95rem;
+	font-variant-numeric: tabular-nums;
+	color: #e9e900;
+}
+
+.gev-hint {
+	margin: 8px 0 0 0;
+	font-family: var(--font-heading);
+	font-size: 0.78rem;
+	color: #aaa;
+}
+
+.gev-key {
+	font-family: var(--font-code);
+	color: #ddd;
+	border: 1px solid #555;
+	border-radius: 3px;
+	padding: 0 4px;
+	background: #222;
+}
+
+/* ---- fullscreen ---- */
+
+.ge-viewer:fullscreen {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	border-width: 2px;
+	background: #000;
+}
+
+.ge-viewer:fullscreen .gev-stage {
+	flex: 1;
+	aspect-ratio: auto;
+}
+
+/* Taller viewport, so stretch the falloff to match rather than banding it
+   all into the top third. */
+.ge-viewer:fullscreen .gev-stage {
+	background-image: linear-gradient(
+		180deg,
+		#242428 0%,
+		#131316 65%,
+		#050506 100%
+	);
+}
+
+/* ---- responsive ---- */
+
+@media (max-width: 700px) {
+	.gev-stage {
+		aspect-ratio: 1 / 1;
+	}
+
+	.gev-btn {
+		font-size: 0.75rem;
+		padding: 5px 8px;
+	}
+
+	.gev-readout > div {
+		flex: 1 1 45%;
+	}
+}
