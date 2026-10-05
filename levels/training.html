@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Facility - The GoldenEye Depot</title>
+	<title>Training/Armory - The GoldenEye Depot</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -10,6 +10,16 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+	
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+			"three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+		}
+	}
+	</script>
+	<script type="module" src="/ge-model-viewer.js"></script>
 </head>
 <body>
 	<div class="site-frame">
@@ -40,8 +50,105 @@
 		</ul>
 	</nav>
 	<main>
-		<h1 class="page-title page-title--extra-margin">Training</h1>
+		<h1 class="page-title page-title--extra-margin">Training/Armory</h1>
+				
+		<h2 class="main-subtitle">Overview</h2>
 		
+		<section class="image-gallery panel">
+			<div class="gallery-grid">
+				<figure>
+					<p>
+						Training was a level cut from <span class="gold-text"><em>GoldenEye 007</em></span>. It's hard to nail down exactly what it was, or even how many levels it would have been, since the
+						idea didn't get anywhere near completion. It seems the concept was to have an MI6 environment where there would have been some combination of tutorials, minigames, and a shooting range. The only part
+						of it that actually got made was the shooting range.
+						The developer who worked on it, Adrian Smith, described it as follows:
+						<blockquote class="dev-quote">
+							<p>
+							"It was modelled as an environment from 'Q' Branch. It would have been great if it was added and incorporated with some mini games."
+							</p>
+							<cite>
+							— Adrian Smith, GoldenEye 007 Developer
+								<span class="quote-source">
+								  (<a href="https://youtu.be/Z1Fx18cppZk?si=EQyeGvzZb9Ddl_dM&t=2660" target="_blank" rel="noopener">Source</a>)
+								</span>
+							</cite>
+						</blockquote>
+					</p>
+					<p>
+						According to project lead Martin Hollis the team did not get around to fully developing the concept for <em>GoldenEye</em>, but did for <em>Perfect Dark</em>. Thus we might surmise Training would have been
+						analogous to <em>Perfect Dark's</em> Carrington Institute.
+					</p>
+					<p>
+						The menu concept on the right is from the book <em>Nintendo 64 Anthology</em> and lists both Armory and Training as options. As far as we know neither of those menu options were ever programmed in. When developers tested Training
+						they would have loaded straight into the level with a debug boot command.
+					</p>
+					<p>
+						The book <em>GoldenEye 007</em> by Alyse Knorr adds more detail:
+					</p>
+					<p>
+						<blockquote class="dev-quote">
+							<p>
+							"The team also had to cut out a firing range that Smith had built as a kind of mini-game, with one range
+							for pistols, another for rifles, and one for the sniper and rocket launcher, with timed accuracy tests and
+							target-shooting games that could unlock new weapons. Smith’s shooting range looked just like the one from Q
+							branch in the movie, Smith told me — he duplicated the hallways and made the floor transparent so it looked like
+							you had a mirror image of the galleries. But this double geometry would have slowed the frame rate down, and
+							the team needed the cartridge space for multiplayer, so it had to wait until an eventual appearance in Perfect Dark
+							(2000)."
+							</p>
+							<cite>
+								<span class="quote-source">
+								  (<em>GoldenEye 007</em> by Alyse Knorr, p. 90)
+								</span>
+							</cite>
+						</blockquote>
+					</p>
+				</figure>
+				<figure>
+					<a href="/images/pr/concepts/preplay-sketch.jpg">
+					<img src="/images/pr/concepts/preplay-sketch.jpg">
+					</a>
+					<figcaption>
+						Menu concept with "Armory" and "Training" listed as options.
+					</figcaption>
+				</figure>
+			</div>
+			<p>
+				It sounds like it would have been a really cool looking level, and this adds another confirmation that the idea was carried over to <em>Perfect Dark</em>. But there's also a couple of odd statements here. Mirroring the level's
+				geometry to create a reflection shouldn't have been too much of an issue for the N64. They did it for Egyptian's reflecting pool after all. And if cartridge space was an issue why not remove Citadel to make room for the shooting range?
+			</p>
+		</section>
+		
+		<h2 class="main-subtitle">Assets</h2>
+		
+		<section class="image-gallery panel">
+			<div class="gallery-grid">
+				<p>
+					It can't be said for certain, but I think this texture was likely meant to be the shooting range target.
+				</p>
+				<figure>
+					<img src="/images/textures/08D6.png">
+					<figcaption>64x32 8-bit Grayscale</figcaption>
+				</figure>
+			</div>
+			<p>
+				We do not have the level's main geometry, but data miners did find an unused collision tile file in the XBLA leak. The file goes by the name "sho", perhaps short for shooting range. It consists of a hexagonal center with three branches. We
+				believe this is likely the collision for the cut level. See below for an interactive view. The three branches match well with Smith's description of the three ranges.
+			</p>
+		</section>
+		
+		<div class="section-sep" aria-hidden="true"></div>
+				
+		<h2 class="main-subtitle">Level Viewer</h2>
+		
+		<div class="ge-viewer"
+			data-ge-model="/models/Tbg_sho_all_p_stanZ.glb"
+			data-title="Sho"
+			data-poster="/images/pr/training/training01.jpg">
+		</div>
+		
+		<div class="section-sep" aria-hidden="true"></div>
+				
 		<div class="back-link-wrap">
 			<a href="/prerelease.html" class="back-link">Back to Prerelease</a>
 		</div>
